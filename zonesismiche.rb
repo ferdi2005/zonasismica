@@ -40,11 +40,16 @@ begin
                 wikitext = wikipedia.query prop: :revisions, titles: title, rvprop: :content, rvslots: "*"
                 begin
                     text = wikitext.data["pages"].first[1]["revisions"][0]["slots"]["main"]["*"]
-                    match = text.match(/\|\s*Zona\ssismica\s*=\s*(\d)/)
-                    if match != nil
-                        if match[1].to_i != row[4].value.to_i
+                    if text.match?(/\|\s*Zona\ssismica\s*=\s*([\dA-B\-]+)/)
+                            zonasismica = row[4].value
+                            zonesismiche = []
+                            zonasismica.to_s.scan(/(\d[A-B]*)\-*/).each { |z| zonesismiche.push(z[0])}
+                            matches = []
+                            match = text.match(/\|\s*Zona\ssismica\s*=\s*([\dA-B\-]+)/)
+                            match[1].to_s.scan(/(\d[A-B]*)\-*/).each { |z| matches.push(z[0])}
+                        if matches.join("-") != zonesismiche.join("-")
                             c += 1
-                            f.write("#{title},#{match[1]},#{row[4].value}\n")
+                            f.write("#{title},#{matches.join("-")},#{zonesismiche.join("-")}\n")
                         end
                     else
                         puts "#{row[3].value.strip} trovato #{title} e non matchabile (#{row[4].value})"
