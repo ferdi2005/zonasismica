@@ -45,7 +45,7 @@ begin
             tot += 1
             # stringaricerca = 'intitle:"' + row[3].value.strip + '" comune italiano'
             # search = wikipedia.query(list: "search", srsearch: stringaricerca, srlimit: 1)
-            if petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_"))} != nil || petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_").gsub("-", "_"))} != nil ||  petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_").gsub("_", "-"))} != nil
+            if petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_"))} != nil || petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_").gsub("-", "_"))} != nil ||  petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_").gsub("_", "-"))} != nil || petscan.find { |e| e["title"].include?(row[3].value.strip.gsub("è","é").gsub(" ", "_"))} != nil || petscan.find { |e| e["title"].include?(row[3].value.strip.gsub("é","è").gsub(" ", "_"))} != nil 
                 # title = search.data["search"][0]["title"]
                 if petscan.select { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_"))}.count > 1
                     if petscan.find { |e| e["title"] == row[3].value.strip.gsub(" ", "_")} != nil
@@ -57,6 +57,12 @@ begin
                         n += 1
                         next
                     end
+                elsif petscan.find { |e| e["title"] == "#{row[3].value.strip} (Italia)".gsub(" ", "_")} != nil
+                    title = petscan.find { |e| e["title"] == "#{row[3].value.strip} (Italia)".gsub(" ", "_")}["title"]
+                elsif petscan.find { |e| e["title"].include?(row[3].value.strip.gsub("è","é").gsub(" ", "_"))} != nil 
+                    title = petscan.find { |e| e["title"].include?(row[3].value.strip.gsub("è","é").gsub(" ", "_"))}["title"]
+                elsif petscan.find { |e| e["title"].include?(row[3].value.strip.gsub("é","è").gsub(" ", "_"))} != nil 
+                    title = petscan.find { |e| e["title"].include?(row[3].value.strip.gsub("é","è").gsub(" ", "_"))}["title"]
                 elsif petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_"))} != nil
                     title = petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_"))}["title"]
                 elsif petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_").gsub("-", "_"))} != nil
