@@ -79,7 +79,7 @@ begin
                             f.write("#{title},#{matches.join("-")},#{zonesismiche.join("-")}\n")
                             if active
                                 text.gsub!(/\|\s*Zona\ssismica\s*=\s*([\dA-B\-]+)/, "|Zona sismica = #{zonesismiche.join("-")}")
-                                wikipedia.edit(title: title, text: text, summary: "Correzione del dato della zona sismica (si veda [[Discussioni progetto:Amministrazioni/Comuni italiani#Monitoraggio delle zone sismiche]])")
+                                wikipedia.edit(title: title, text: text, summary: "Correzione del dato della zona sismica (si veda [[Discussioni progetto:Amministrazioni/Comuni italiani#Monitoraggio delle zone sismiche]])", bot: true)
                                 puts "Pagina #{title} aggiornata con successo"
                             end
                         end
