@@ -50,7 +50,7 @@ begin
                 if petscan.select { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_"))}.count > 1
                     if petscan.find { |e| e["title"] == row[3].value.strip.gsub(" ", "_")} != nil
                         title = petscan.find { |e| e["title"] == row[3].value.strip.gsub(" ", "_")}["title"]
-                    elsif petscan.find { |e| e["title"] == "#{row[3].value.strip} (Italia)".gsub(" ", "_")} != nil
+                   elsif petscan.find { |e| e["title"] == "#{row[3].value.strip} (Italia)".gsub(" ", "_")} != nil
                         title = petscan.find { |e| e["title"] == "#{row[3].value.strip} (Italia)".gsub(" ", "_")}["title"]
                     else
                         puts "#{row[3].value.strip} più opzioni"
@@ -73,18 +73,18 @@ begin
                 wikitext = wikipedia.query prop: :revisions, titles: title, rvprop: :content, rvslots: "*"
                 begin
                     text = wikitext.data["pages"].first[1]["revisions"][0]["slots"]["main"]["*"]
-                    if text.match?(/\|\s*Zona\ssismica\s*=\s*([\dA-B\-]+)/)
+                    if text.match?(/\|\s*Zona\ssismica\s*=\s*([\d\w\-]+)/i)
                             zonasismica = row[4].value
                             zonesismiche = []
-                            zonasismica.to_s.scan(/(\d[A-B]*)\-*/).each { |z| zonesismiche.push(z[0])}
+                            zonasismica.to_s.scan(/(\d[ABs]*)\-*/i).each { |z| zonesismiche.push(z[0])}
                             matches = []
-                            match = text.match(/\|\s*Zona\ssismica\s*=\s*([\dA-B\-]+)/)
-                            match[1].to_s.scan(/(\d[A-B]*)\-*/).each { |z| matches.push(z[0])}
-                        if matches.join("-") != zonesismiche.join("-")
+                            match = text.match(/\|\s*Zona\ssismica\s*=\s*([\dABs\-]+)/i)
+                            match[1].to_s.scan(/(\d\w*)\-*/).each { |z| matches.push(z[0])}
+                        if matches.join("-").capitalize != zonesismiche.join("-").capitalize
                             c += 1
-                            f.write("#{title},#{matches.join("-")},#{zonesismiche.join("-")}\n")
+                            f.write("#{title},#{matches.join("-").capitalize},#{zonesismiche.join("-").capitalize}\n")
                             if active
-                                text.gsub!(/\|\s*Zona\ssismica\s*=\s*([\dA-B\-]+)/, "|Zona sismica = #{zonesismiche.join("-")}")
+                                text.gsub!(/\|\s*Zona\ssismica\s*=\s*[\w\d\-]+/i, "|Zona sismica = #{zonesismiche.join("-").capitalize}")
                                 wikipedia.edit(title: title, text: text, summary: "Correzione del dato della zona sismica (si veda [[Discussioni progetto:Amministrazioni/Comuni italiani#Monitoraggio delle zone sismiche]])", bot: true)
                                 puts "Pagina #{title} aggiornata con successo"
                             end
