@@ -40,9 +40,9 @@ for (z in zones) {
     var zone = zones[z];
     
     await wbEdit.claim.create({
-            id: "Q47070",
+            id: zone[0],
             property: "P9235",
-            value: matchingZones["2"],
+            value: matchingZones[zone[1]],
             references: [
                 { P248: "Q206936"},
                 { P854: "http://www.protezionecivile.gov.it/attivita-rischi/rischio-sismico/attivita/classificazione-sismica", P813: new Date().toISOString().split('T')[0]}
