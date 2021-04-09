@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "sleep": "^6.3.0",
+    "wikibase-edit": "^4.12.0"
+  }
+}
