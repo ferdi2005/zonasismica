@@ -30,6 +30,7 @@ c = 0
 tot = 0
 n = 0
 wikidata_array = []
+different_array = []
 unless File.exist? "#{__dir__}/lista.txt"
     url = "https://petscan.wmflabs.org/?format=json&doit=&categories=Comuni%20d%27Italia&depth=8&project=wikipedia&lang=it&templates_yes=divisione%20amministrativa"
     petscan = HTTParty.get(url, timeout: 1000).to_h["*"][0]["a"]["*"]
@@ -76,7 +77,38 @@ begin
                     zonasismica = row[4].value
                     zonesismiche = []
                     zonasismica.to_s.scan(/(\d[ABS]*)\-*/i).each { |z| zonesismiche.push(z[0])}
-                    wikidata_array.push([item, zonesismiche.join("-")])
+
+                    check = HTTParty.get("https://www.wikidata.org/w/api.php?action=wbgetentities&ids=#{item}&format=json&languages=en")
+                    
+                    is_there = check.to_hash["entities"][item]["claims"]["P9235"]
+
+                    if is_there.nil?
+                        wikidata_array.push([item, zonesismiche.join("-")])
+                    else
+                        stated_id = check.to_hash["entities"][item]["claims"]["P9235"][0]["mainsnak"]["datavalue"]["value"]["id"]
+                        matching_zones = {
+                            "1": "Q106435253",
+                            "1-2A": "Q106435254",
+                            "2": "Q106435255",
+                            "2A": "Q106435256",
+                            "2A-2B": "Q106435257",
+                            "2B": "Q106435258",
+                            "2A-3A-3B": "Q106435259",
+                            "2B-3A": "Q106435260",
+                            "3": "Q106435261",
+                            "3S": "Q106435262",
+                            "3A": "Q106435263",
+                            "3A-3B": "Q106435264",
+                            "3B": "Q106435265",
+                            "3-4": "Q106435266",
+                            "4": "Q106435267"
+                        }
+                        
+                        if stated_id != matching_zones[zonesismiche.join("-").to_sym]
+                            different_array.push([item, zonesismiche.join("-")])
+                            c += 1
+                        end
+                    end
                 rescue
                     puts "#{title} nessun elemento"
                     next
@@ -92,9 +124,18 @@ rescue Interrupt => e
     lista = File.open("#{__dir__}/wikidata.txt", "w")
     lista.write(wikidata_array.to_json)
     lista.close
+
+    differenti = File.open("#{__dir__}/differenti.txt", "w")
+    differenti.write(different_array.to_json)
+    differenti.close
     puts "Elaborati #{tot} comuni di cui #{c} con discrepanze. Ci sono #{n} errori."
 end
 lista = File.open("#{__dir__}/wikidata.txt", "w")
 lista.write(wikidata_array.to_json)
 lista.close
+
+differenti = File.open("#{__dir__}/differenti.txt", "w")
+differenti.write(different_array.to_json)
+differenti.close
+
 puts "Elaborati #{tot} comuni di cui #{c} con discrepanze Ci sono #{n} errori.."

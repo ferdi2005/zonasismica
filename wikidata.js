@@ -14,7 +14,7 @@ const generalConfig = {
     userAgent: 'FerdiBot/v1.0.0 (https://ferdinando.me; ferdi.traversa@gmail.com)',
     maxlag: 10
 }
-const wbEdit = require('wikibase-edit')(generalConfig)
+const wbEdit = require('wikibase-edit')(generalConfig);
 
 var zones = JSON.parse(fs.readFileSync("wikidata.txt", "utf-8"));
 
@@ -36,19 +36,26 @@ matchingZones = {
     "4": "Q106435267"
 }
 
-for (z in zones) {
-    var zone = zones[z];
-    
-    await wbEdit.claim.create({
-            id: zone[0],
-            property: "P9235",
-            value: matchingZones[zone[1]],
-            references: [
-                { P248: "Q206936"},
-                { P854: "http://www.protezionecivile.gov.it/attivita-rischi/rischio-sismico/attivita/classificazione-sismica", P813: new Date().toISOString().split('T')[0]}
-            ]
-        });
-
+try {
+    for (z in zones) {
+        var zone = zones[z];
         
-        console.log("Updated " + zone[0]);
+        await wbEdit.claim.create({
+                id: zone[0],
+                property: "P9235",
+                value: matchingZones[zone[1]],
+                references: [
+                    { P248: "Q206936"},
+                    { P854: "http://www.protezionecivile.gov.it/attivita-rischi/rischio-sismico/attivita/classificazione-sismica", P813: new Date().toISOString().split('T')[0]}
+                ]
+            });
+
+            delete zones[z];
+            
+            console.log("Updated " + zone[0]);
+    }
+    fs.writeFileSync("new_wikidata.txt", JSON.stringify(zones), "utf8");
+} catch (error) {
+    fs.writeFileSync("new_wikidata.txt", JSON.stringify(zones), "utf8"); 
 }
+
