@@ -51,8 +51,10 @@ begin
                 if petscan.select { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_"))}.count > 1
                     if petscan.find { |e| e["title"] == row[3].value.strip.gsub(" ", "_")} != nil
                         title = petscan.find { |e| e["title"] == row[3].value.strip.gsub(" ", "_")}["title"]
+                        item = petscan.find { |e| e["title"] == row[3].value.strip.gsub(" ", "_")}["q"]
                     elsif petscan.find { |e| e["title"] == "#{row[3].value.strip} (Italia)".gsub(" ", "_")} != nil
                         title = petscan.find { |e| e["title"] == "#{row[3].value.strip} (Italia)".gsub(" ", "_")}["title"]
+                        item = petscan.find { |e| e["title"] == "#{row[3].value.strip} (Italia)".gsub(" ", "_")}["q"]
                     else
                         puts "#{row[3].value.strip} più opzioni"
                         n += 1
@@ -60,20 +62,26 @@ begin
                     end
                 elsif petscan.find { |e| e["title"] == "#{row[3].value.strip} (Italia)".gsub(" ", "_")} != nil
                     title = petscan.find { |e| e["title"] == "#{row[3].value.strip} (Italia)".gsub(" ", "_")}["title"]
+                    item = petscan.find { |e| e["title"] == "#{row[3].value.strip} (Italia)".gsub(" ", "_")}["q"]
                 elsif petscan.find { |e| e["title"].include?(row[3].value.strip.gsub("è","é").gsub(" ", "_"))} != nil 
                     title = petscan.find { |e| e["title"].include?(row[3].value.strip.gsub("è","é").gsub(" ", "_"))}["title"]
+                    item = petscan.find { |e| e["title"].include?(row[3].value.strip.gsub("è","é").gsub(" ", "_"))}["q"]
                 elsif petscan.find { |e| e["title"].include?(row[3].value.strip.gsub("é","è").gsub(" ", "_"))} != nil 
                     title = petscan.find { |e| e["title"].include?(row[3].value.strip.gsub("é","è").gsub(" ", "_"))}["title"]
+                    item = petscan.find { |e| e["title"].include?(row[3].value.strip.gsub("é","è").gsub(" ", "_"))}["q"]
                 elsif petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_"))} != nil
                     title = petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_"))}["title"]
+                    item = petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_"))}["q"]
                 elsif petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_").gsub("-", "_"))} != nil
                     title = petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_").gsub("-", "_"))}["title"]
+                    item = petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_").gsub("-", "_"))}["q"]
                 elsif petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_").gsub("_", "-"))} != nil
                     title = petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_").gsub("_", "-"))}["title"]
+                    item = petscan.find { |e| e["title"].include?(row[3].value.strip.gsub(" ", "_").gsub("_", "-"))}[""]
                 end
                 begin
-                    wikidata = wikipedia.query prop: :iwlinks, titles: title, iwprefix: :d
-                    item = wikidata.data["pages"].first[1]["iwlinks"][0]["*"]
+                    # wikidata = wikipedia.query prop: :iwlinks, titles: title, iwprefix: :d
+                    # item = wikidata.data["pages"].first[1]["iwlinks"][0]["*"]
                     zonasismica = row[4].value
                     zonesismiche = []
                     zonasismica.to_s.scan(/(\d[ABS]*)\-*/i).each { |z| zonesismiche.push(z[0])}

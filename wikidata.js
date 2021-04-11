@@ -11,8 +11,7 @@ const generalConfig = {
         password: password
     },
     summary: "Adding seismic zone",
-    userAgent: 'FerdiBot/v1.0.0 (https://ferdinando.me; ferdi.traversa@gmail.com)',
-    maxlag: 10
+    userAgent: 'ZonaSismicaBot@FerdiBot/v1.0.1 (https://ferdinando.me)'
 }
 const wbEdit = require('wikibase-edit')(generalConfig);
 
@@ -53,6 +52,7 @@ try {
             delete zones[z];
             
             console.log("Updated " + zone[0]);
+            sleep.sleep(60); // Wait during test
     }
     fs.writeFileSync("new_wikidata.txt", JSON.stringify(zones), "utf8");
 } catch (error) {
