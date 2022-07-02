@@ -48,84 +48,106 @@ begin
         row = row.map { |_,i| i&.strip } # Rimuovo spazi bianchi non necessari
 
         # Sostituzione province con nomi non standard
-        if row[1] == "Bolzano - Bozen"
+        case row[1]
+        when "Bolzano - Bozen"
             row[1] = "Bolzano"
-        elsif row[1] == "Valle d'Aosta"
+        when "Valle d'Aosta"
             row[1] = "Aosta"
+        when "Reggio di Calabria"
+            row[1] = "Reggio Calabria"
+        end
+
+        # Sostituzione comuni con nomi non standard
+        case row[3]
+        when "Reggio di Calabria"
+            row[3] = "Reggio Calabria"
+        when "Reggio nell'Emilia"
+            row[3] = "Reggio Emilia"
+        when "Ceresole Alba"
+            row[3] = "Ceresole d'Alba"
+        when "Portovenere"
+            row[3] = "Porto Venere"
+        when "San Dorligo della Valle-Dolina"
+            row[3] = "San Dorligo della Valle"
         end
 
         tot += 1
         # stringaricerca = 'intitle:"' + row[3] + '" comune italiano'
         # search = wikipedia.query(list: "search", srsearch: stringaricerca, srlimit: 1)
-        if petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_"))} != nil || petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub("-", "_"))} != nil ||  petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub("_", "-"))} != nil || petscan.find { |e| e["title"].include?(row[3].gsub("è","é").gsub(" ", "_"))} != nil || petscan.find { |e| e["title"].include?(row[3].gsub("é","è").gsub(" ", "_"))} != nil 
             # title = search.data["search"][0]["title"]
-            if petscan.select { |e| e["title"].include?(row[3].gsub(" ", "_"))}.count > 1
-                if petscan.find { |e| e["title"] == row[3].gsub(" ", "_")} != nil
-                    title = petscan.find { |e| e["title"] == row[3].gsub(" ", "_")}["title"]
-                elsif petscan.find { |e| e["title"] == "#{row[3]} (Italia)".gsub(" ", "_")} != nil
-                    title = petscan.find { |e| e["title"] == "#{row[3]} (Italia)".gsub(" ", "_")}["title"]
-                elsif petscan.find { |e| e["title"] == "#{row[3]} (comune)".gsub(" ", "_")} != nil
-                    title = petscan.find { |e| e["title"] == "#{row[3]} (comune)".gsub(" ", "_")}["title"]
-                elsif petscan.find { |e| e["title"] == "#{row[3]} (comune italiano)".gsub(" ", "_")} != nil
-                    title = petscan.find { |e| e["title"] == "#{row[3]} (comune italiano)".gsub(" ", "_")}["title"]
-                # verifica la regione come disambiguante
-                elsif petscan.find { |e| e["title"] == "#{row[3]} (#{row[0]})".gsub(" ", "_")} != nil
-                    title = petscan.find { |e| e["title"] == "#{row[3]} (#{row[0]})".gsub(" ", "_")}["title"]
-                # verifica la provincia come disambiguante
-                elsif petscan.find { |e| e["title"] == "#{row[3]} (#{row[1]})".gsub(" ", "_")} != nil
-                    title = petscan.find { |e| e["title"] == "#{row[3]} (#{row[1]})".gsub(" ", "_")}["title"]
-                else
-                    puts "#{row[3]} più opzioni"
-                    n += 1
-                    next
-                end
+        if petscan.select { |e| e["title"].include?(row[3].gsub(" ", "_"))}.count == 1
+            title = petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_"))}["title"]
+        elsif petscan.select { |e| e["title"].include?(row[3].gsub(" ", "_"))}.count > 1
+            if petscan.find { |e| e["title"] == row[3].gsub(" ", "_")} != nil
+                title = petscan.find { |e| e["title"] == row[3].gsub(" ", "_")}["title"]
             elsif petscan.find { |e| e["title"] == "#{row[3]} (Italia)".gsub(" ", "_")} != nil
                 title = petscan.find { |e| e["title"] == "#{row[3]} (Italia)".gsub(" ", "_")}["title"]
-            elsif petscan.find { |e| e["title"].include?(row[3].gsub("è","é").gsub(" ", "_"))} != nil 
-                title = petscan.find { |e| e["title"].include?(row[3].gsub("è","é").gsub(" ", "_"))}["title"]
-            elsif petscan.find { |e| e["title"].include?(row[3].gsub("é","è").gsub(" ", "_"))} != nil 
-                title = petscan.find { |e| e["title"].include?(row[3].gsub("é","è").gsub(" ", "_"))}["title"]
-            elsif petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_"))} != nil
-                title = petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_"))}["title"]
-            elsif petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub("-", "_"))} != nil
-                title = petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub("-", "_"))}["title"]
-            elsif petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub("_", "-"))} != nil
-                title = petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub("_", "-"))}["title"]
-            end
-            wikitext = wikipedia.query prop: :revisions, titles: title, rvprop: :content, rvslots: "*"
-            begin
-                text = wikitext.data["pages"].first[1]["revisions"][0]["slots"]["main"]["*"]
-                if text.match?(/\|\s*Zona\ssismica\s*=\s*([\d\w\-]+)/i)
-                        zonasismica = row[4]
-                        zonesismiche = []
-                        zonasismica.to_s.scan(/(\d[ABs]*)\-*/i).each { |z| zonesismiche.push(z[0])}
-                        matches = []
-                        match = text.match(/\|\s*Zona\ssismica\s*=\s*([\dABs\-]+)/i)
-                        match[1].to_s.scan(/(\d\w*)\-*/).each { |z| matches.push(z[0])}
-                    if matches.join("-").capitalize != zonesismiche.join("-").capitalize
-                        c += 1
-                        f.write("#{title},#{matches.join("-").capitalize},#{zonesismiche.join("-").capitalize}\n")
-                        if active
-                            text.gsub!(/\|\s*Zona\ssismica\s*=\s*[\w\d\-]+/i, "|Zona sismica = #{zonesismiche.join("-").capitalize}")
-                            wikipedia.edit(title: title, text: text, summary: "Aggiornamento del dato della zona sismica al 31 marzo 2022", bot: true)
-                            puts "Pagina #{title} aggiornata con successo"
-                        end
-                    end
-                else
-                    puts "#{row[3]} trovato #{title} e non matchabile (#{row[4]})"
-                    m.write("#{title},#{row[4]}\n")
-                    n += 1
-                end
-            rescue
-                puts "#{row[3]} non trovato in ricerca"
+            elsif petscan.find { |e| e["title"] == "#{row[3]} (comune)".gsub(" ", "_")} != nil
+                title = petscan.find { |e| e["title"] == "#{row[3]} (comune)".gsub(" ", "_")}["title"]
+            elsif petscan.find { |e| e["title"] == "#{row[3]} (comune italiano)".gsub(" ", "_")} != nil
+                title = petscan.find { |e| e["title"] == "#{row[3]} (comune italiano)".gsub(" ", "_")}["title"]
+            # verifica la regione come disambiguante
+            elsif petscan.find { |e| e["title"] == "#{row[3]} (#{row[0]})".gsub(" ", "_")} != nil
+                title = petscan.find { |e| e["title"] == "#{row[3]} (#{row[0]})".gsub(" ", "_")}["title"]
+            # verifica la provincia come disambiguante
+            elsif petscan.find { |e| e["title"] == "#{row[3]} (#{row[1]})".gsub(" ", "_")} != nil
+                title = petscan.find { |e| e["title"] == "#{row[3]} (#{row[1]})".gsub(" ", "_")}["title"]
+            else
+                puts "#{row[3]} più opzioni"
                 n += 1
                 next
             end
-        else 
+        elsif petscan.find { |e| e["title"] == "#{row[3]} (Italia)".gsub(" ", "_")} != nil
+            title = petscan.find { |e| e["title"] == "#{row[3]} (Italia)".gsub(" ", "_")}["title"]
+        elsif petscan.find { |e| e["title"].include?(row[3].gsub("è","é").gsub(" ", "_"))} != nil 
+            title = petscan.find { |e| e["title"].include?(row[3].gsub("è","é").gsub(" ", "_"))}["title"]
+        elsif petscan.find { |e| e["title"].include?(row[3].gsub("é","è").gsub(" ", "_"))} != nil 
+            title = petscan.find { |e| e["title"].include?(row[3].gsub("é","è").gsub(" ", "_"))}["title"]
+        elsif petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_"))} != nil
+            title = petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_"))}["title"]
+        elsif petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub("-", "_"))} != nil
+            title = petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub("-", "_"))}["title"]
+        elsif petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub("_", "-"))} != nil
+            title = petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub("_", "-"))}["title"]
+        elsif petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub(" - ", "-"))} != nil
+            title = petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub(" - ", "-"))}["title"]
+        elsif petscan.find { |e| e["title"].include?(row[3].gsub("d'","di ").gsub(" ", "_"))} != nil 
+            title = petscan.find { |e| e["title"].include?(row[3].gsub("d'","di ").gsub(" ", "_"))}["title"]
+        else
             puts "#{row[3]} non trovato"
             n += 1
+            next
+        end 
+        wikitext = wikipedia.query prop: :revisions, titles: title, rvprop: :content, rvslots: "*"
+        begin
+            text = wikitext.data["pages"].first[1]["revisions"][0]["slots"]["main"]["*"]
+            if text.match?(/\|\s*Zona\ssismica\s*=\s*([\d\w\-]+)/i)
+                    zonasismica = row[4]
+                    zonesismiche = []
+                    zonasismica.to_s.scan(/(\d[ABs]*)\-*/i).each { |z| zonesismiche.push(z[0])}
+                    matches = []
+                    match = text.match(/\|\s*Zona\ssismica\s*=\s*([\dABs\-]+)/i)
+                    match[1].to_s.scan(/(\d\w*)\-*/).each { |z| matches.push(z[0])}
+                if matches.join("-").capitalize != zonesismiche.join("-").capitalize
+                    c += 1
+                    f.write("#{title},#{matches.join("-").capitalize},#{zonesismiche.join("-").capitalize}\n")
+                    if active
+                        text.gsub!(/\|\s*Zona\ssismica\s*=\s*[\w\d\-]+/i, "|Zona sismica = #{zonesismiche.join("-").capitalize}")
+                        wikipedia.edit(title: title, text: text, summary: "Aggiornamento del dato della zona sismica al 31 marzo 2022", bot: true)
+                        puts "Pagina #{title} aggiornata con successo"
+                    end
+                end
+            else
+                puts "#{row[3]} trovato #{title} e non matchabile (#{row[4]})"
+                m.write("#{title},#{row[4]}\n")
+                n += 1
+            end
+        rescue => e
+            puts "#{row[3]}: #{e}"
+            n += 1
+            next
         end
-    end
+end
 rescue Interrupt => e 
     puts "Salvo..."
     f.close
