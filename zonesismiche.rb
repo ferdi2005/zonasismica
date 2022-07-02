@@ -47,6 +47,12 @@ begin
         next if row[0].nil? || row[0]&.empty?
         row = row.map { |_,i| i&.strip } # Rimuovo spazi bianchi non necessari
 
+        # Sostituzione regioni con nomi non standard
+        case row[0]
+        when "Friuli- Venezia Giulia"
+            row[0] = "Friuli-Venezia Giulia"
+        end
+
         # Sostituzione province con nomi non standard
         case row[1]
         when "Bolzano - Bozen"
@@ -69,6 +75,10 @@ begin
             row[3] = "Porto Venere"
         when "San Dorligo della Valle-Dolina"
             row[3] = "San Dorligo della Valle"
+        when "Capaccio"
+            row[3] = "Capaccio Paestum"
+        when "San Mauro la Bruca"
+            row[3] = "San Mauro La Bruca"
         end
 
         tot += 1
@@ -111,6 +121,8 @@ begin
             title = petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub("_", "-"))}["title"]
         elsif petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub(" - ", "-"))} != nil
             title = petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub(" - ", "-"))}["title"]
+        elsif petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub("-", " - "))} != nil
+            title = petscan.find { |e| e["title"].include?(row[3].gsub(" ", "_").gsub("-", " - "))}["title"]
         elsif petscan.find { |e| e["title"].include?(row[3].gsub("d'","di ").gsub(" ", "_"))} != nil 
             title = petscan.find { |e| e["title"].include?(row[3].gsub("d'","di ").gsub(" ", "_"))}["title"]
         else
