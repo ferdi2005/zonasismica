@@ -46,6 +46,14 @@ begin
     zone.each do |row|
         next if row[0].nil? || row[0]&.empty?
         row = row.map { |_,i| i&.strip } # Rimuovo spazi bianchi non necessari
+
+        # Sostituzione province con nomi non standard
+        if row[1] == "Bolzano - Bozen"
+            row[1] = "Bolzano"
+        elsif row[1] == "Valle d'Aosta"
+            row[1] = "Aosta"
+        end
+
         tot += 1
         # stringaricerca = 'intitle:"' + row[3] + '" comune italiano'
         # search = wikipedia.query(list: "search", srsearch: stringaricerca, srlimit: 1)
@@ -56,6 +64,16 @@ begin
                     title = petscan.find { |e| e["title"] == row[3].gsub(" ", "_")}["title"]
                 elsif petscan.find { |e| e["title"] == "#{row[3]} (Italia)".gsub(" ", "_")} != nil
                     title = petscan.find { |e| e["title"] == "#{row[3]} (Italia)".gsub(" ", "_")}["title"]
+                elsif petscan.find { |e| e["title"] == "#{row[3]} (comune)".gsub(" ", "_")} != nil
+                    title = petscan.find { |e| e["title"] == "#{row[3]} (comune)".gsub(" ", "_")}["title"]
+                elsif petscan.find { |e| e["title"] == "#{row[3]} (comune italiano)".gsub(" ", "_")} != nil
+                    title = petscan.find { |e| e["title"] == "#{row[3]} (comune italiano)".gsub(" ", "_")}["title"]
+                # verifica la regione come disambiguante
+                elsif petscan.find { |e| e["title"] == "#{row[3]} (#{row[0]})".gsub(" ", "_")} != nil
+                    title = petscan.find { |e| e["title"] == "#{row[3]} (#{row[0]})".gsub(" ", "_")}["title"]
+                # verifica la provincia come disambiguante
+                elsif petscan.find { |e| e["title"] == "#{row[3]} (#{row[1]})".gsub(" ", "_")} != nil
+                    title = petscan.find { |e| e["title"] == "#{row[3]} (#{row[1]})".gsub(" ", "_")}["title"]
                 else
                     puts "#{row[3]} più opzioni"
                     n += 1
