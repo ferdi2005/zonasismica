@@ -128,11 +128,11 @@ begin
                     matches = []
                     match = text.match(/\|\s*Zona\ssismica\s*=\s*([\dABs\-]+)/i)
                     match[1].to_s.scan(/(\d\w*)\-*/).each { |z| matches.push(z[0])}
-                if matches.join("-").capitalize != zonesismiche.join("-").capitalize
+                if matches.join("-") != zonesismiche.join("-").upcase
                     c += 1
-                    f.write("#{title},#{matches.join("-").capitalize},#{zonesismiche.join("-").capitalize}\n")
+                    f.write("#{title},#{matches.join("-")},#{zonesismiche.join("-").upcase}\n")
                     if active
-                        text.gsub!(/\|\s*Zona\ssismica\s*=\s*[\w\d\-]+/i, "|Zona sismica = #{zonesismiche.join("-").capitalize}")
+                        text.gsub!(/\|\s*Zona\ssismica\s*=\s*[\w\d\-]+/i, "|Zona sismica = #{zonesismiche.join("-").upcase}")
                         wikipedia.edit(title: title, text: text, summary: "Aggiornamento del dato della zona sismica al 31 marzo 2022", bot: true)
                         puts "Pagina #{title} aggiornata con successo"
                     end
@@ -148,7 +148,7 @@ begin
             next
         end
 end
-rescue Interrupt => e 
+rescue Interrupt
     puts "Salvo..."
     f.close
     m.close
