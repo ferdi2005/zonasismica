@@ -78,7 +78,25 @@ begin
             row[3] = "Capaccio Paestum"
         when "San Mauro la Bruca"
             row[3] = "San Mauro La Bruca"
+        when "Moio Alcantara"
+            row[3] = "Mojo Alcantara"
+        when "Emarèse"
+            row[3] = "Émarèse"
+        when "Etroubles"
+            row[3] = "Étroubles"
+        when "Cerrina Monferrato"
+            row[3] = "Cerrina"
+        when "Ulà Tirso"
+            row[3] = "Ula Tirso"
+        when "Alcara li Fusi"
+            row[3] = "Alcara Li Fusi"
+        when "Vodo Cadore"
+            row[3] = "Vodo di Cadore"
+        when "San Valentino in AbruzzoCiteriore"
+            row[3] = "San Valentino in Abruzzo Citeriore"
         end
+
+        row[3].gsub!("sulla strada del vino", "sulla Strada del Vino") if row[3].include? "sulla strada del vino"
 
         tot += 1
         # stringaricerca = 'intitle:"' + row[3] + '" comune italiano'
