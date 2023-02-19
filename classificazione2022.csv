@@ -1717,6 +1717,8 @@ Emilia-Romagna;Rimini;99026;Sant'Agata Feltria;2
 Emilia-Romagna;Rimini;99027;Talamello;2
 Emilia-Romagna;Rimini;99028;Poggio Torriana;2
 Emilia-Romagna;Rimini;99029;Montescudo - Monte Colombo;2
+Emilia-Romagna;Rimini;99030;Montecopiolo;2
+Emilia-Romagna;Rimini;99031;Sassofeltrio;2
 Friuli- Venezia Giulia;Udine;30001;Aiello del Friuli;3
 Friuli- Venezia Giulia;Udine;30002;Amaro;1
 Friuli- Venezia Giulia;Udine;30003;Ampezzo;2
@@ -4076,8 +4078,6 @@ Marche;Pesaro e Urbino;41028;Mondavio;2
 Marche;Pesaro e Urbino;41029;Mondolfo;2
 Marche;Pesaro e Urbino;41030;Montecalvo in Foglia;2
 Marche;Pesaro e Urbino;41031;Monte Cerignone;2
-Marche;Pesaro e Urbino;41032;Monteciccardo;2
-Marche;Pesaro e Urbino;41033;Montecopiolo;2
 Marche;Pesaro e Urbino;41034;Montefelcino;2
 Marche;Pesaro e Urbino;41035;Monte Grimano Terme;2
 Marche;Pesaro e Urbino;41036;Montelabbate;2
@@ -4093,7 +4093,6 @@ Marche;Pesaro e Urbino;41051;San Costanzo;2
 Marche;Pesaro e Urbino;41054;San Lorenzo in Campo;2
 Marche;Pesaro e Urbino;41057;Sant'Angelo in Vado;2
 Marche;Pesaro e Urbino;41058;Sant'Ippolito;2
-Marche;Pesaro e Urbino;41060;Sassofeltrio;2
 Marche;Pesaro e Urbino;41061;Serra Sant'Abbondio;2
 Marche;Pesaro e Urbino;41064;Tavoleto;2
 Marche;Pesaro e Urbino;41065;Tavullia;2
@@ -4206,9 +4205,9 @@ Marche;Macerata;43056;Ussita;2
 Marche;Macerata;43057;Visso;1
 Marche;Macerata;43058;Valfornace;2
 Marche;Ascoli Piceno;44001;Acquasanta Terme;2
-Marche;Ascoli Piceno;44002;Acquaviva Picena;3
+Marche;Ascoli Piceno;44002;Acquaviva Picena;2
 Marche;Ascoli Piceno;44005;Appignano del Tronto;2
-Marche;Ascoli Piceno;44006;Arquata del Tronto;2
+Marche;Ascoli Piceno;44006;Arquata del Tronto;1
 Marche;Ascoli Piceno;44007;Ascoli Piceno;2
 Marche;Ascoli Piceno;44010;Carassai;2
 Marche;Ascoli Piceno;44011;Castel di Lama;2
@@ -4217,36 +4216,36 @@ Marche;Ascoli Piceno;44013;Castorano;2
 Marche;Ascoli Piceno;44014;Colli del Tronto;2
 Marche;Ascoli Piceno;44015;Comunanza;2
 Marche;Ascoli Piceno;44016;Cossignano;2
-Marche;Ascoli Piceno;44017;Cupra Marittima;3
+Marche;Ascoli Piceno;44017;Cupra Marittima;2
 Marche;Ascoli Piceno;44020;Folignano;2
 Marche;Ascoli Piceno;44021;Force;2
-Marche;Ascoli Piceno;44023;Grottammare;3
+Marche;Ascoli Piceno;44023;Grottammare;2
 Marche;Ascoli Piceno;44027;Maltignano;2
-Marche;Ascoli Piceno;44029;Massignano;3
+Marche;Ascoli Piceno;44029;Massignano;2
 Marche;Ascoli Piceno;44031;Monsampolo del Tronto;2
 Marche;Ascoli Piceno;44032;Montalto delle Marche;2
 Marche;Ascoli Piceno;44034;Montedinove;2
-Marche;Ascoli Piceno;44036;Montefiore dell'Aso;3
+Marche;Ascoli Piceno;44036;Montefiore dell'Aso;2
 Marche;Ascoli Piceno;44038;Montegallo;2
 Marche;Ascoli Piceno;44044;Montemonaco;2
 Marche;Ascoli Piceno;44045;Monteprandone;2
 Marche;Ascoli Piceno;44054;Offida;2
 Marche;Ascoli Piceno;44056;Palmiano;2
-Marche;Ascoli Piceno;44063;Ripatransone;3
+Marche;Ascoli Piceno;44063;Ripatransone;2
 Marche;Ascoli Piceno;44064;Roccafluvione;2
 Marche;Ascoli Piceno;44065;Rotella;2
-Marche;Ascoli Piceno;44066;San Benedetto del Tronto;3
+Marche;Ascoli Piceno;44066;San Benedetto del Tronto;2
 Marche;Ascoli Piceno;44071;Spinetoli;2
 Marche;Ascoli Piceno;44073;Venarotta;2
-Marche;Fermo;109001;Altidona;3
+Marche;Fermo;109001;Altidona;2
 Marche;Fermo;109002;Amandola;2
 Marche;Fermo;109003;Belmonte Piceno;2
-Marche;Fermo;109004;Campofilone;3
+Marche;Fermo;109004;Campofilone;2
 Marche;Fermo;109005;Falerone;2
 Marche;Fermo;109006;Fermo;2
 Marche;Fermo;109007;Francavilla d'Ete;2
 Marche;Fermo;109008;Grottazzolina;2
-Marche;Fermo;109009;Lapedona;3
+Marche;Fermo;109009;Lapedona;2
 Marche;Fermo;109010;Magliano di Tenna;2
 Marche;Fermo;109011;Massa Fermana;2
 Marche;Fermo;109012;Monsampietro Morico;2
@@ -4265,9 +4264,9 @@ Marche;Fermo;109024;Monte Urano;2
 Marche;Fermo;109025;Monte Vidon Combatte;2
 Marche;Fermo;109026;Monte Vidon Corrado;2
 Marche;Fermo;109027;Montottone;2
-Marche;Fermo;109028;Moresco;3
+Marche;Fermo;109028;Moresco;2
 Marche;Fermo;109029;Ortezzano;2
-Marche;Fermo;109030;Pedaso;3
+Marche;Fermo;109030;Pedaso;2
 Marche;Fermo;109031;Petritoli;2
 Marche;Fermo;109032;Ponzano di Fermo;2
 Marche;Fermo;109033;Porto San Giorgio;2
@@ -4895,253 +4894,253 @@ Piemonte;Novara;3154;Varallo Pombia;4
 Piemonte;Novara;3158;Vespolate;4
 Piemonte;Novara;3159;Vicolungo;4
 Piemonte;Novara;3164;Vinzaglio;4
-Piemonte;Cuneo;4001; Acceglio;3S
-Piemonte;Cuneo;4002; Aisone;3S
-Piemonte;Cuneo;4003; Alba;4
-Piemonte;Cuneo;4004; Albaretto della Torre;4
-Piemonte;Cuneo;4005; Alto;3S
-Piemonte;Cuneo;4006; Argentera;3S
-Piemonte;Cuneo;4007; Arguello;4
-Piemonte;Cuneo;4008; Bagnasco;3
-Piemonte;Cuneo;4009; Bagnolo Piemonte;3S
-Piemonte;Cuneo;4010; Baldissero d'Alba;4
-Piemonte;Cuneo;4011; Barbaresco;4
-Piemonte;Cuneo;4012; Barge;3S
-Piemonte;Cuneo;4013; Barolo;4
-Piemonte;Cuneo;4014; Bastia Mondovì;4
-Piemonte;Cuneo;4015; Battifollo;3
-Piemonte;Cuneo;4016; Beinette;3
-Piemonte;Cuneo;4017; Bellino;3S
-Piemonte;Cuneo;4018; Belvedere Langhe;4
-Piemonte;Cuneo;4019; Bene Vagienna;4
-Piemonte;Cuneo;4020; Benevello;4
-Piemonte;Cuneo;4021; Bergolo;4
-Piemonte;Cuneo;4022; Bernezzo;3S
-Piemonte;Cuneo;4023; Bonvicino;4
-Piemonte;Cuneo;4025; Borgo San Dalmazzo;3S
-Piemonte;Cuneo;4024; Borgomale;4
-Piemonte;Cuneo;4026; Bosia;4
-Piemonte;Cuneo;4027; Bossolasco;4
-Piemonte;Cuneo;4028; Boves;3S
-Piemonte;Cuneo;4029; Bra;3
-Piemonte;Cuneo;4030; Briaglia;4
-Piemonte;Cuneo;4031; Briga Alta;3S
-Piemonte;Cuneo;4032; Brondello;3S
-Piemonte;Cuneo;4033; Brossasco;3S
-Piemonte;Cuneo;4034; Busca;3S
-Piemonte;Cuneo;4035; Camerana;4
-Piemonte;Cuneo;4037; Canale;4
-Piemonte;Cuneo;4038; Canosio;3S
-Piemonte;Cuneo;4039; Caprauna;3S
-Piemonte;Cuneo;4040; Caraglio;3S
-Piemonte;Cuneo;4041; Caramagna Piemonte;3
-Piemonte;Cuneo;4042; Cardè;3
-Piemonte;Cuneo;4043; Carrù;4
-Piemonte;Cuneo;4044; Cartignano;3S
-Piemonte;Cuneo;4045; Casalgrasso;3
-Piemonte;Cuneo;4046; Castagnito;4
-Piemonte;Cuneo;4047; Casteldelfino;3S
-Piemonte;Cuneo;4049; Castelletto Stura;3
-Piemonte;Cuneo;4050; Castelletto Uzzone;4
-Piemonte;Cuneo;4051; Castellinaldo d'Alba;4
-Piemonte;Cuneo;4052; Castellino Tanaro;4
-Piemonte;Cuneo;4053; Castelmagno;3S
-Piemonte;Cuneo;4054; Castelnuovo di Ceva;3
-Piemonte;Cuneo;4055; Castiglione Falletto;4
-Piemonte;Cuneo;4056; Castiglione Tinella;4
-Piemonte;Cuneo;4057; Castino;4
-Piemonte;Cuneo;4058; Cavallerleone;3
-Piemonte;Cuneo;4059; Cavallermaggiore;3
-Piemonte;Cuneo;4060; Celle di Macra;3S
-Piemonte;Cuneo;4061; Centallo;3
-Piemonte;Cuneo;4062; Ceresole Alba;3
-Piemonte;Cuneo;4063; Cerretto Langhe;4
-Piemonte;Cuneo;4064; Cervasca;3S
-Piemonte;Cuneo;4065; Cervere;3
-Piemonte;Cuneo;4066; Ceva;4
-Piemonte;Cuneo;4067; Cherasco;3
-Piemonte;Cuneo;4068; Chiusa di Pesio;3
-Piemonte;Cuneo;4069; Cigliè;4
-Piemonte;Cuneo;4070; Cissone;4
-Piemonte;Cuneo;4071; Clavesana;4
-Piemonte;Cuneo;4072; Corneliano d'Alba;4
-Piemonte;Cuneo;4073; Cortemilia;4
-Piemonte;Cuneo;4074; Cossano Belbo;4
-Piemonte;Cuneo;4075; Costigliole Saluzzo;3S
-Piemonte;Cuneo;4076; Cravanzana;4
-Piemonte;Cuneo;4077; Crissolo;3S
-Piemonte;Cuneo;4078; Cuneo;3S
-Piemonte;Cuneo;4079; Demonte;3S
-Piemonte;Cuneo;4080; Diano d'Alba;4
-Piemonte;Cuneo;4081; Dogliani;4
-Piemonte;Cuneo;4082; Dronero;3S
-Piemonte;Cuneo;4083; Elva;3S
-Piemonte;Cuneo;4084; Entracque;3S
-Piemonte;Cuneo;4085; Envie;3S
-Piemonte;Cuneo;4086; Farigliano;4
-Piemonte;Cuneo;4087; Faule;3
-Piemonte;Cuneo;4088; Feisoglio;4
-Piemonte;Cuneo;4089; Fossano;3
-Piemonte;Cuneo;4090; Frabosa Soprana;3
-Piemonte;Cuneo;4091; Frabosa Sottana;3
-Piemonte;Cuneo;4092; Frassino;3S
-Piemonte;Cuneo;4093; Gaiola;3S
-Piemonte;Cuneo;4094; Gambasca;3S
-Piemonte;Cuneo;4095; Garessio;3
-Piemonte;Cuneo;4096; Genola;3
-Piemonte;Cuneo;4097; Gorzegno;4
-Piemonte;Cuneo;4098; Gottasecca;4
-Piemonte;Cuneo;4099; Govone;4
-Piemonte;Cuneo;4100; Grinzane Cavour;4
-Piemonte;Cuneo;4101; Guarene;4
-Piemonte;Cuneo;4102; Igliano;4
-Piemonte;Cuneo;4103; Isasca;3S
-Piemonte;Cuneo;4105; La Morra;4
-Piemonte;Cuneo;4104; Lagnasco;3
-Piemonte;Cuneo;4106; Lequio Berria;4
-Piemonte;Cuneo;4107; Lequio Tanaro;4
-Piemonte;Cuneo;4108; Lesegno;4
-Piemonte;Cuneo;4109; Levice;4
-Piemonte;Cuneo;4110; Limone Piemonte;3S
-Piemonte;Cuneo;4111; Lisio;3
-Piemonte;Cuneo;4112; Macra;3S
-Piemonte;Cuneo;4113; Magliano Alfieri;4
-Piemonte;Cuneo;4114; Magliano Alpi;3
-Piemonte;Cuneo;4115; Mango;4
-Piemonte;Cuneo;4116; Manta;3
-Piemonte;Cuneo;4117; Marene;3
-Piemonte;Cuneo;4118; Margarita;3
-Piemonte;Cuneo;4119; Marmora;3S
-Piemonte;Cuneo;4120; Marsaglia;4
-Piemonte;Cuneo;4121; Martiniana Po;3S
-Piemonte;Cuneo;4122; Melle;3S
-Piemonte;Cuneo;4123; Moiola;3S
-Piemonte;Cuneo;4124; Mombarcaro;4
-Piemonte;Cuneo;4125; Mombasiglio;4
-Piemonte;Cuneo;4126; Monastero di Vasco;3
-Piemonte;Cuneo;4127; Monasterolo Casotto;3
-Piemonte;Cuneo;4128; Monasterolo di Savigliano;3
-Piemonte;Cuneo;4129; Monchiero;4
-Piemonte;Cuneo;4130; Mondovì;3
-Piemonte;Cuneo;4131; Monesiglio;4
-Piemonte;Cuneo;4132; Monforte d'Alba;4
-Piemonte;Cuneo;4133; Montà;4
-Piemonte;Cuneo;4134; Montaldo di Mondovì;3
-Piemonte;Cuneo;4135; Montaldo Roero;4
-Piemonte;Cuneo;4136; Montanera;3
-Piemonte;Cuneo;4137; Montelupo Albese;4
-Piemonte;Cuneo;4138; Montemale di Cuneo;3S
-Piemonte;Cuneo;4139; Monterosso Grana;3S
-Piemonte;Cuneo;4140; Monteu Roero;4
-Piemonte;Cuneo;4141; Montezemolo;3
-Piemonte;Cuneo;4142; Monticello d'Alba;4
-Piemonte;Cuneo;4143; Moretta;3
-Piemonte;Cuneo;4144; Morozzo;3
-Piemonte;Cuneo;4145; Murazzano;4
-Piemonte;Cuneo;4146; Murello;3
-Piemonte;Cuneo;4147; Narzole;4
-Piemonte;Cuneo;4148; Neive;4
-Piemonte;Cuneo;4149; Neviglie;4
-Piemonte;Cuneo;4150; Niella Belbo;4
-Piemonte;Cuneo;4151; Niella Tanaro;4
-Piemonte;Cuneo;4152; Novello;4
-Piemonte;Cuneo;4153; Nucetto;4
-Piemonte;Cuneo;4154; Oncino;3S
-Piemonte;Cuneo;4155; Ormea;3S
-Piemonte;Cuneo;4156; Ostana;3S
-Piemonte;Cuneo;4157; Paesana;3S
-Piemonte;Cuneo;4158; Pagno;3S
-Piemonte;Cuneo;4159; Pamparato;3
-Piemonte;Cuneo;4160; Paroldo;4
-Piemonte;Cuneo;4161; Perletto;4
-Piemonte;Cuneo;4162; Perlo;3
-Piemonte;Cuneo;4163; Peveragno;3
-Piemonte;Cuneo;4164; Pezzolo Valle Uzzone;4
-Piemonte;Cuneo;4165; Pianfei;3
-Piemonte;Cuneo;4166; Piasco;3S
-Piemonte;Cuneo;4167; Pietraporzio;3S
-Piemonte;Cuneo;4168; Piobesi d'Alba;4
-Piemonte;Cuneo;4169; Piozzo;4
-Piemonte;Cuneo;4170; Pocapaglia;4
-Piemonte;Cuneo;4171; Polonghera;3
-Piemonte;Cuneo;4172; Pontechianale;3S
-Piemonte;Cuneo;4173; Pradleves;3S
-Piemonte;Cuneo;4174; Prazzo;3S
-Piemonte;Cuneo;4175; Priero;3
-Piemonte;Cuneo;4176; Priocca;4
-Piemonte;Cuneo;4177; Priola;3
-Piemonte;Cuneo;4178; Prunetto;4
-Piemonte;Cuneo;4179; Racconigi;3
-Piemonte;Cuneo;4180; Revello;3S
-Piemonte;Cuneo;4181; Rifreddo;3S
-Piemonte;Cuneo;4182; Rittana;3S
-Piemonte;Cuneo;4183; Roaschia;3S
-Piemonte;Cuneo;4184; Roascio;4
-Piemonte;Cuneo;4185; Robilante;3S
-Piemonte;Cuneo;4186; Roburent;3
-Piemonte;Cuneo;4188; Rocca Cigliè;4
-Piemonte;Cuneo;4189; Rocca de' Baldi;3
-Piemonte;Cuneo;4187; Roccabruna;3S
-Piemonte;Cuneo;4190; Roccaforte Mondovì;3
-Piemonte;Cuneo;4191; Roccasparvera;3S
-Piemonte;Cuneo;4192; Roccavione;3S
-Piemonte;Cuneo;4193; Rocchetta Belbo;4
-Piemonte;Cuneo;4194; Roddi;4
-Piemonte;Cuneo;4195; Roddino;4
-Piemonte;Cuneo;4196; Rodello;4
-Piemonte;Cuneo;4197; Rossana;3S
-Piemonte;Cuneo;4198; Ruffia;3
-Piemonte;Cuneo;4199; Sale delle Langhe;4
-Piemonte;Cuneo;4200; Sale San Giovanni;4
-Piemonte;Cuneo;4201; Saliceto;3
-Piemonte;Cuneo;4202; Salmour;4
-Piemonte;Cuneo;4203; Saluzzo;3
-Piemonte;Cuneo;4204; Sambuco;3S
-Piemonte;Cuneo;4205; Sampeyre;3S
-Piemonte;Cuneo;4206; San Benedetto Belbo;4
-Piemonte;Cuneo;4207; San Damiano Macra;3S
-Piemonte;Cuneo;4210; San Michele Mondovì;4
-Piemonte;Cuneo;4208; Sanfrè;3
-Piemonte;Cuneo;4209; Sanfront;3S
-Piemonte;Cuneo;4212; Santa Vittoria d'Alba;4
-Piemonte;Cuneo;4211; Sant'Albano Stura;3
-Piemonte;Cuneo;4213; Santo Stefano Belbo;4
-Piemonte;Cuneo;4214; Santo Stefano Roero;4
-Piemonte;Cuneo;4215; Savigliano;3
-Piemonte;Cuneo;4216; Scagnello;4
-Piemonte;Cuneo;4217; Scarnafigi;3
-Piemonte;Cuneo;4218; Serralunga d'Alba;4
-Piemonte;Cuneo;4219; Serravalle Langhe;4
-Piemonte;Cuneo;4220; Sinio;4
-Piemonte;Cuneo;4221; Somano;4
-Piemonte;Cuneo;4222; Sommariva del Bosco;3
-Piemonte;Cuneo;4223; Sommariva Perno;4
-Piemonte;Cuneo;4224; Stroppo;3S
-Piemonte;Cuneo;4225; Tarantasca;3
-Piemonte;Cuneo;4226; Torre Bormida;4
-Piemonte;Cuneo;4227; Torre Mondovì;3
-Piemonte;Cuneo;4228; Torre San Giorgio;3
-Piemonte;Cuneo;4229; Torresina;4
-Piemonte;Cuneo;4230; Treiso;4
-Piemonte;Cuneo;4231; Trezzo Tinella;4
-Piemonte;Cuneo;4232; Trinità;4
-Piemonte;Cuneo;4233; Valdieri;3S
-Piemonte;Cuneo;4234; Valgrana;3S
-Piemonte;Cuneo;4235; Valloriate;3S
-Piemonte;Cuneo;4237; Venasca;3S
-Piemonte;Cuneo;4238; Verduno;4
-Piemonte;Cuneo;4239; Vernante;3S
-Piemonte;Cuneo;4240; Verzuolo;3S
-Piemonte;Cuneo;4241; Vezza d'Alba;4
-Piemonte;Cuneo;4242; Vicoforte;3
-Piemonte;Cuneo;4243; Vignolo;3S
-Piemonte;Cuneo;4244; Villafalletto;3
-Piemonte;Cuneo;4245; Villanova Mondovì;3
-Piemonte;Cuneo;4246; Villanova Solaro;3
-Piemonte;Cuneo;4247; Villar San Costanzo;3S
-Piemonte;Cuneo;4248; Vinadio;3S
-Piemonte;Cuneo;4249; Viola;3
-Piemonte;Cuneo;4250; Vottignasco;3
+Piemonte;Cuneo;4001;Acceglio;3S
+Piemonte;Cuneo;4002;Aisone;3S
+Piemonte;Cuneo;4003;Alba;4
+Piemonte;Cuneo;4004;Albaretto della Torre;4
+Piemonte;Cuneo;4005;Alto;3S
+Piemonte;Cuneo;4006;Argentera;3S
+Piemonte;Cuneo;4007;Arguello;4
+Piemonte;Cuneo;4008;Bagnasco;3
+Piemonte;Cuneo;4009;Bagnolo Piemonte;3S
+Piemonte;Cuneo;4010;Baldissero d'Alba;4
+Piemonte;Cuneo;4011;Barbaresco;4
+Piemonte;Cuneo;4012;Barge;3S
+Piemonte;Cuneo;4013;Barolo;4
+Piemonte;Cuneo;4014;Bastia Mondovì;4
+Piemonte;Cuneo;4015;Battifollo;3
+Piemonte;Cuneo;4016;Beinette;3
+Piemonte;Cuneo;4017;Bellino;3S
+Piemonte;Cuneo;4018;Belvedere Langhe;4
+Piemonte;Cuneo;4019;Bene Vagienna;4
+Piemonte;Cuneo;4020;Benevello;4
+Piemonte;Cuneo;4021;Bergolo;4
+Piemonte;Cuneo;4022;Bernezzo;3S
+Piemonte;Cuneo;4023;Bonvicino;4
+Piemonte;Cuneo;4025;Borgo San Dalmazzo;3S
+Piemonte;Cuneo;4024;Borgomale;4
+Piemonte;Cuneo;4026;Bosia;4
+Piemonte;Cuneo;4027;Bossolasco;4
+Piemonte;Cuneo;4028;Boves;3S
+Piemonte;Cuneo;4029;Bra;3
+Piemonte;Cuneo;4030;Briaglia;4
+Piemonte;Cuneo;4031;Briga Alta;3S
+Piemonte;Cuneo;4032;Brondello;3S
+Piemonte;Cuneo;4033;Brossasco;3S
+Piemonte;Cuneo;4034;Busca;3S
+Piemonte;Cuneo;4035;Camerana;4
+Piemonte;Cuneo;4037;Canale;4
+Piemonte;Cuneo;4038;Canosio;3S
+Piemonte;Cuneo;4039;Caprauna;3S
+Piemonte;Cuneo;4040;Caraglio;3S
+Piemonte;Cuneo;4041;Caramagna Piemonte;3
+Piemonte;Cuneo;4042;Cardè;3
+Piemonte;Cuneo;4043;Carrù;4
+Piemonte;Cuneo;4044;Cartignano;3S
+Piemonte;Cuneo;4045;Casalgrasso;3
+Piemonte;Cuneo;4046;Castagnito;4
+Piemonte;Cuneo;4047;Casteldelfino;3S
+Piemonte;Cuneo;4049;Castelletto Stura;3
+Piemonte;Cuneo;4050;Castelletto Uzzone;4
+Piemonte;Cuneo;4051;Castellinaldo d'Alba;4
+Piemonte;Cuneo;4052;Castellino Tanaro;4
+Piemonte;Cuneo;4053;Castelmagno;3S
+Piemonte;Cuneo;4054;Castelnuovo di Ceva;3
+Piemonte;Cuneo;4055;Castiglione Falletto;4
+Piemonte;Cuneo;4056;Castiglione Tinella;4
+Piemonte;Cuneo;4057;Castino;4
+Piemonte;Cuneo;4058;Cavallerleone;3
+Piemonte;Cuneo;4059;Cavallermaggiore;3
+Piemonte;Cuneo;4060;Celle di Macra;3S
+Piemonte;Cuneo;4061;Centallo;3
+Piemonte;Cuneo;4062;Ceresole Alba;3
+Piemonte;Cuneo;4063;Cerretto Langhe;4
+Piemonte;Cuneo;4064;Cervasca;3S
+Piemonte;Cuneo;4065;Cervere;3
+Piemonte;Cuneo;4066;Ceva;4
+Piemonte;Cuneo;4067;Cherasco;3
+Piemonte;Cuneo;4068;Chiusa di Pesio;3
+Piemonte;Cuneo;4069;Cigliè;4
+Piemonte;Cuneo;4070;Cissone;4
+Piemonte;Cuneo;4071;Clavesana;4
+Piemonte;Cuneo;4072;Corneliano d'Alba;4
+Piemonte;Cuneo;4073;Cortemilia;4
+Piemonte;Cuneo;4074;Cossano Belbo;4
+Piemonte;Cuneo;4075;Costigliole Saluzzo;3S
+Piemonte;Cuneo;4076;Cravanzana;4
+Piemonte;Cuneo;4077;Crissolo;3S
+Piemonte;Cuneo;4078;Cuneo;3S
+Piemonte;Cuneo;4079;Demonte;3S
+Piemonte;Cuneo;4080;Diano d'Alba;4
+Piemonte;Cuneo;4081;Dogliani;4
+Piemonte;Cuneo;4082;Dronero;3S
+Piemonte;Cuneo;4083;Elva;3S
+Piemonte;Cuneo;4084;Entracque;3S
+Piemonte;Cuneo;4085;Envie;3S
+Piemonte;Cuneo;4086;Farigliano;4
+Piemonte;Cuneo;4087;Faule;3
+Piemonte;Cuneo;4088;Feisoglio;4
+Piemonte;Cuneo;4089;Fossano;3
+Piemonte;Cuneo;4090;Frabosa Soprana;3
+Piemonte;Cuneo;4091;Frabosa Sottana;3
+Piemonte;Cuneo;4092;Frassino;3S
+Piemonte;Cuneo;4093;Gaiola;3S
+Piemonte;Cuneo;4094;Gambasca;3S
+Piemonte;Cuneo;4095;Garessio;3
+Piemonte;Cuneo;4096;Genola;3
+Piemonte;Cuneo;4097;Gorzegno;4
+Piemonte;Cuneo;4098;Gottasecca;4
+Piemonte;Cuneo;4099;Govone;4
+Piemonte;Cuneo;4100;Grinzane Cavour;4
+Piemonte;Cuneo;4101;Guarene;4
+Piemonte;Cuneo;4102;Igliano;4
+Piemonte;Cuneo;4103;Isasca;3S
+Piemonte;Cuneo;4105;La Morra;4
+Piemonte;Cuneo;4104;Lagnasco;3
+Piemonte;Cuneo;4106;Lequio Berria;4
+Piemonte;Cuneo;4107;Lequio Tanaro;4
+Piemonte;Cuneo;4108;Lesegno;4
+Piemonte;Cuneo;4109;Levice;4
+Piemonte;Cuneo;4110;Limone Piemonte;3S
+Piemonte;Cuneo;4111;Lisio;3
+Piemonte;Cuneo;4112;Macra;3S
+Piemonte;Cuneo;4113;Magliano Alfieri;4
+Piemonte;Cuneo;4114;Magliano Alpi;3
+Piemonte;Cuneo;4115;Mango;4
+Piemonte;Cuneo;4116;Manta;3
+Piemonte;Cuneo;4117;Marene;3
+Piemonte;Cuneo;4118;Margarita;3
+Piemonte;Cuneo;4119;Marmora;3S
+Piemonte;Cuneo;4120;Marsaglia;4
+Piemonte;Cuneo;4121;Martiniana Po;3S
+Piemonte;Cuneo;4122;Melle;3S
+Piemonte;Cuneo;4123;Moiola;3S
+Piemonte;Cuneo;4124;Mombarcaro;4
+Piemonte;Cuneo;4125;Mombasiglio;4
+Piemonte;Cuneo;4126;Monastero di Vasco;3
+Piemonte;Cuneo;4127;Monasterolo Casotto;3
+Piemonte;Cuneo;4128;Monasterolo di Savigliano;3
+Piemonte;Cuneo;4129;Monchiero;4
+Piemonte;Cuneo;4130;Mondovì;3
+Piemonte;Cuneo;4131;Monesiglio;4
+Piemonte;Cuneo;4132;Monforte d'Alba;4
+Piemonte;Cuneo;4133;Montà;4
+Piemonte;Cuneo;4134;Montaldo di Mondovì;3
+Piemonte;Cuneo;4135;Montaldo Roero;4
+Piemonte;Cuneo;4136;Montanera;3
+Piemonte;Cuneo;4137;Montelupo Albese;4
+Piemonte;Cuneo;4138;Montemale di Cuneo;3S
+Piemonte;Cuneo;4139;Monterosso Grana;3S
+Piemonte;Cuneo;4140;Monteu Roero;4
+Piemonte;Cuneo;4141;Montezemolo;3
+Piemonte;Cuneo;4142;Monticello d'Alba;4
+Piemonte;Cuneo;4143;Moretta;3
+Piemonte;Cuneo;4144;Morozzo;3
+Piemonte;Cuneo;4145;Murazzano;4
+Piemonte;Cuneo;4146;Murello;3
+Piemonte;Cuneo;4147;Narzole;4
+Piemonte;Cuneo;4148;Neive;4
+Piemonte;Cuneo;4149;Neviglie;4
+Piemonte;Cuneo;4150;Niella Belbo;4
+Piemonte;Cuneo;4151;Niella Tanaro;4
+Piemonte;Cuneo;4152;Novello;4
+Piemonte;Cuneo;4153;Nucetto;4
+Piemonte;Cuneo;4154;Oncino;3S
+Piemonte;Cuneo;4155;Ormea;3S
+Piemonte;Cuneo;4156;Ostana;3S
+Piemonte;Cuneo;4157;Paesana;3S
+Piemonte;Cuneo;4158;Pagno;3S
+Piemonte;Cuneo;4159;Pamparato;3
+Piemonte;Cuneo;4160;Paroldo;4
+Piemonte;Cuneo;4161;Perletto;4
+Piemonte;Cuneo;4162;Perlo;3
+Piemonte;Cuneo;4163;Peveragno;3
+Piemonte;Cuneo;4164;Pezzolo Valle Uzzone;4
+Piemonte;Cuneo;4165;Pianfei;3
+Piemonte;Cuneo;4166;Piasco;3S
+Piemonte;Cuneo;4167;Pietraporzio;3S
+Piemonte;Cuneo;4168;Piobesi d'Alba;4
+Piemonte;Cuneo;4169;Piozzo;4
+Piemonte;Cuneo;4170;Pocapaglia;4
+Piemonte;Cuneo;4171;Polonghera;3
+Piemonte;Cuneo;4172;Pontechianale;3S
+Piemonte;Cuneo;4173;Pradleves;3S
+Piemonte;Cuneo;4174;Prazzo;3S
+Piemonte;Cuneo;4175;Priero;3
+Piemonte;Cuneo;4176;Priocca;4
+Piemonte;Cuneo;4177;Priola;3
+Piemonte;Cuneo;4178;Prunetto;4
+Piemonte;Cuneo;4179;Racconigi;3
+Piemonte;Cuneo;4180;Revello;3S
+Piemonte;Cuneo;4181;Rifreddo;3S
+Piemonte;Cuneo;4182;Rittana;3S
+Piemonte;Cuneo;4183;Roaschia;3S
+Piemonte;Cuneo;4184;Roascio;4
+Piemonte;Cuneo;4185;Robilante;3S
+Piemonte;Cuneo;4186;Roburent;3
+Piemonte;Cuneo;4188;Rocca Cigliè;4
+Piemonte;Cuneo;4189;Rocca de' Baldi;3
+Piemonte;Cuneo;4187;Roccabruna;3S
+Piemonte;Cuneo;4190;Roccaforte Mondovì;3
+Piemonte;Cuneo;4191;Roccasparvera;3S
+Piemonte;Cuneo;4192;Roccavione;3S
+Piemonte;Cuneo;4193;Rocchetta Belbo;4
+Piemonte;Cuneo;4194;Roddi;4
+Piemonte;Cuneo;4195;Roddino;4
+Piemonte;Cuneo;4196;Rodello;4
+Piemonte;Cuneo;4197;Rossana;3S
+Piemonte;Cuneo;4198;Ruffia;3
+Piemonte;Cuneo;4199;Sale delle Langhe;4
+Piemonte;Cuneo;4200;Sale San Giovanni;4
+Piemonte;Cuneo;4201;Saliceto;3
+Piemonte;Cuneo;4202;Salmour;4
+Piemonte;Cuneo;4203;Saluzzo;3
+Piemonte;Cuneo;4204;Sambuco;3S
+Piemonte;Cuneo;4205;Sampeyre;3S
+Piemonte;Cuneo;4206;San Benedetto Belbo;4
+Piemonte;Cuneo;4207;San Damiano Macra;3S
+Piemonte;Cuneo;4210;San Michele Mondovì;4
+Piemonte;Cuneo;4208;Sanfrè;3
+Piemonte;Cuneo;4209;Sanfront;3S
+Piemonte;Cuneo;4212;Santa Vittoria d'Alba;4
+Piemonte;Cuneo;4211;Sant'Albano Stura;3
+Piemonte;Cuneo;4213;Santo Stefano Belbo;4
+Piemonte;Cuneo;4214;Santo Stefano Roero;4
+Piemonte;Cuneo;4215;Savigliano;3
+Piemonte;Cuneo;4216;Scagnello;4
+Piemonte;Cuneo;4217;Scarnafigi;3
+Piemonte;Cuneo;4218;Serralunga d'Alba;4
+Piemonte;Cuneo;4219;Serravalle Langhe;4
+Piemonte;Cuneo;4220;Sinio;4
+Piemonte;Cuneo;4221;Somano;4
+Piemonte;Cuneo;4222;Sommariva del Bosco;3
+Piemonte;Cuneo;4223;Sommariva Perno;4
+Piemonte;Cuneo;4224;Stroppo;3S
+Piemonte;Cuneo;4225;Tarantasca;3
+Piemonte;Cuneo;4226;Torre Bormida;4
+Piemonte;Cuneo;4227;Torre Mondovì;3
+Piemonte;Cuneo;4228;Torre San Giorgio;3
+Piemonte;Cuneo;4229;Torresina;4
+Piemonte;Cuneo;4230;Treiso;4
+Piemonte;Cuneo;4231;Trezzo Tinella;4
+Piemonte;Cuneo;4232;Trinità;4
+Piemonte;Cuneo;4233;Valdieri;3S
+Piemonte;Cuneo;4234;Valgrana;3S
+Piemonte;Cuneo;4235;Valloriate;3S
+Piemonte;Cuneo;4237;Venasca;3S
+Piemonte;Cuneo;4238;Verduno;4
+Piemonte;Cuneo;4239;Vernante;3S
+Piemonte;Cuneo;4240;Verzuolo;3S
+Piemonte;Cuneo;4241;Vezza d'Alba;4
+Piemonte;Cuneo;4242;Vicoforte;3
+Piemonte;Cuneo;4243;Vignolo;3S
+Piemonte;Cuneo;4244;Villafalletto;3
+Piemonte;Cuneo;4245;Villanova Mondovì;3
+Piemonte;Cuneo;4246;Villanova Solaro;3
+Piemonte;Cuneo;4247;Villar San Costanzo;3S
+Piemonte;Cuneo;4248;Vinadio;3S
+Piemonte;Cuneo;4249;Viola;3
+Piemonte;Cuneo;4250;Vottignasco;3
 Piemonte;Asti;5001;Agliano Terme;4
 Piemonte;Asti;5002;Albugnano;4
 Piemonte;Asti;5003;Antignano;4
@@ -5260,193 +5259,193 @@ Piemonte;Asti;5118;Villanova d'Asti;4
 Piemonte;Asti;5119;Villa San Secondo;4
 Piemonte;Asti;5120;Vinchio;4
 Piemonte;Asti;5121;Montiglio Monferrato;4
-Piemonte;Alessandria;6001; Acqui Terme;3
-Piemonte;Alessandria;6002; Albera Ligure;3
-Piemonte;Alessandria;6003; Alessandria;3
-Piemonte;Alessandria;6004; Alfiano Natta;4
-Piemonte;Alessandria;6005; Alice Bel Colle;3
-Piemonte;Alessandria;6192; Alluvioni Piovera;3
-Piemonte;Alessandria;6007; Altavilla Monferrato;4
-Piemonte;Alessandria;6008; Alzano Scrivia;3
-Piemonte;Alessandria;6009; Arquata Scrivia;3
-Piemonte;Alessandria;6010; Avolasca;3
-Piemonte;Alessandria;6011; Balzola;4
-Piemonte;Alessandria;6012; Basaluzzo;3
-Piemonte;Alessandria;6013; Bassignana;4
-Piemonte;Alessandria;6014; Belforte Monferrato;3
-Piemonte;Alessandria;6015; Bergamasco;4
-Piemonte;Alessandria;6016; Berzano di Tortona;3
-Piemonte;Alessandria;6017; Bistagno;3
-Piemonte;Alessandria;6018; Borghetto di Borbera;3
-Piemonte;Alessandria;6020; Borgo San Martino;4
-Piemonte;Alessandria;6019; Borgoratto Alessandrino;3
-Piemonte;Alessandria;6021; Bosco Marengo;3
-Piemonte;Alessandria;6022; Bosio;3
-Piemonte;Alessandria;6023; Bozzole;4
-Piemonte;Alessandria;6024; Brignano-Frascata;3
-Piemonte;Alessandria;6025; Cabella Ligure;3
-Piemonte;Alessandria;6026; Camagna Monferrato;4
-Piemonte;Alessandria;6027; Camino;4
-Piemonte;Alessandria;6028; Cantalupo Ligure;3
-Piemonte;Alessandria;6029; Capriata d'Orba;3
-Piemonte;Alessandria;6030; Carbonara Scrivia;3
-Piemonte;Alessandria;6031; Carentino;4
-Piemonte;Alessandria;6032; Carezzano;3
-Piemonte;Alessandria;6033; Carpeneto;3
-Piemonte;Alessandria;6034; Carrega Ligure;3
-Piemonte;Alessandria;6035; Carrosio;3
-Piemonte;Alessandria;6036; Cartosio;3
-Piemonte;Alessandria;6037; Casal Cermelli;3
-Piemonte;Alessandria;6039; Casale Monferrato;4
-Piemonte;Alessandria;6038; Casaleggio Boiro;3
-Piemonte;Alessandria;6040; Casalnoceto;3
-Piemonte;Alessandria;6041; Casasco;3
-Piemonte;Alessandria;6191; Cassano Spinola;3
-Piemonte;Alessandria;6043; Cassine;3
-Piemonte;Alessandria;6044; Cassinelle;3
-Piemonte;Alessandria;6045; Castellania Coppi;3
-Piemonte;Alessandria;6046; Castellar Guidobono;3
-Piemonte;Alessandria;6047; Castellazzo Bormida;3
-Piemonte;Alessandria;6048; Castelletto d'Erro;3
-Piemonte;Alessandria;6049; Castelletto d'Orba;3
-Piemonte;Alessandria;6050; Castelletto Merli;4
-Piemonte;Alessandria;6051; Castelletto Monferrato;4
-Piemonte;Alessandria;6052; Castelnuovo Bormida;3
-Piemonte;Alessandria;6053; Castelnuovo Scrivia;3
-Piemonte;Alessandria;6054; Castelspina;3
-Piemonte;Alessandria;6055; Cavatore;3
-Piemonte;Alessandria;6056; Cella Monte;4
-Piemonte;Alessandria;6057; Cereseto;4
-Piemonte;Alessandria;6058; Cerreto Grue;3
-Piemonte;Alessandria;6059; Cerrina Monferrato;4
-Piemonte;Alessandria;6060; Coniolo;4
-Piemonte;Alessandria;6061; Conzano;4
-Piemonte;Alessandria;6062; Costa Vescovato;3
-Piemonte;Alessandria;6063; Cremolino;3
-Piemonte;Alessandria;6065; Denice;3
-Piemonte;Alessandria;6066; Dernice;3
-Piemonte;Alessandria;6067; Fabbrica Curone;3
-Piemonte;Alessandria;6068; Felizzano;4
-Piemonte;Alessandria;6069; Fraconalto;3
-Piemonte;Alessandria;6070; Francavilla Bisio;3
-Piemonte;Alessandria;6071; Frascaro;3
-Piemonte;Alessandria;6072; Frassinello Monferrato;4
-Piemonte;Alessandria;6073; Frassineto Po;4
-Piemonte;Alessandria;6074; Fresonara;3
-Piemonte;Alessandria;6075; Frugarolo;3
-Piemonte;Alessandria;6076; Fubine Monferrato;4
-Piemonte;Alessandria;6077; Gabiano;4
-Piemonte;Alessandria;6078; Gamalero;3
-Piemonte;Alessandria;6079; Garbagna;3
-Piemonte;Alessandria;6081; Gavi;3
-Piemonte;Alessandria;6082; Giarole;4
-Piemonte;Alessandria;6083; Gremiasco;3
-Piemonte;Alessandria;6084; Grognardo;3
-Piemonte;Alessandria;6085; Grondona;3
-Piemonte;Alessandria;6086; Guazzora;3
-Piemonte;Alessandria;6087; Isola Sant'Antonio;3
-Piemonte;Alessandria;6088; Lerma;3
-Piemonte;Alessandria;6193; Lu e Cuccaro Monferrato;4
-Piemonte;Alessandria;6090; Malvicino;3
-Piemonte;Alessandria;6091; Masio;4
-Piemonte;Alessandria;6092; Melazzo;3
-Piemonte;Alessandria;6093; Merana;3
-Piemonte;Alessandria;6094; Mirabello Monferrato;4
-Piemonte;Alessandria;6095; Molare;3
-Piemonte;Alessandria;6096; Molino dei Torti;3
-Piemonte;Alessandria;6097; Mombello Monferrato;4
-Piemonte;Alessandria;6098; Momperone;3
-Piemonte;Alessandria;6099; Moncestino;4
-Piemonte;Alessandria;6100; Mongiardino Ligure;3
-Piemonte;Alessandria;6101; Monleale;3
-Piemonte;Alessandria;6102; Montacuto;3
-Piemonte;Alessandria;6103; Montaldeo;3
-Piemonte;Alessandria;6104; Montaldo Bormida;3
-Piemonte;Alessandria;6105; Montecastello;3
-Piemonte;Alessandria;6106; Montechiaro d'Acqui;3
-Piemonte;Alessandria;6107; Montegioco;3
-Piemonte;Alessandria;6108; Montemarzino;3
-Piemonte;Alessandria;6109; Morano sul Po;4
-Piemonte;Alessandria;6110; Morbello;3
-Piemonte;Alessandria;6111; Mornese;3
-Piemonte;Alessandria;6112; Morsasco;3
-Piemonte;Alessandria;6113; Murisengo;4
-Piemonte;Alessandria;6114; Novi Ligure;3
-Piemonte;Alessandria;6115; Occimiano;4
-Piemonte;Alessandria;6116; Odalengo Grande;4
-Piemonte;Alessandria;6117; Odalengo Piccolo;4
-Piemonte;Alessandria;6118; Olivola;4
-Piemonte;Alessandria;6119; Orsara Bormida;3
-Piemonte;Alessandria;6120; Ottiglio;4
-Piemonte;Alessandria;6121; Ovada;3
-Piemonte;Alessandria;6122; Oviglio;4
-Piemonte;Alessandria;6123; Ozzano Monferrato;4
-Piemonte;Alessandria;6124; Paderna;3
-Piemonte;Alessandria;6125; Pareto;3
-Piemonte;Alessandria;6126; Parodi Ligure;3
-Piemonte;Alessandria;6127; Pasturana;3
-Piemonte;Alessandria;6128; Pecetto di Valenza;4
-Piemonte;Alessandria;6129; Pietra Marazzi;3
-Piemonte;Alessandria;6131; Pomaro Monferrato;4
-Piemonte;Alessandria;6132; Pontecurone;3
-Piemonte;Alessandria;6133; Pontestura;4
-Piemonte;Alessandria;6134; Ponti;3
-Piemonte;Alessandria;6135; Ponzano Monferrato;4
-Piemonte;Alessandria;6136; Ponzone;3
-Piemonte;Alessandria;6137; Pozzol Groppo;3
-Piemonte;Alessandria;6138; Pozzolo Formigaro;3
-Piemonte;Alessandria;6139; Prasco;3
-Piemonte;Alessandria;6140; Predosa;3
-Piemonte;Alessandria;6141; Quargnento;4
-Piemonte;Alessandria;6142; Quattordio;4
-Piemonte;Alessandria;6143; Ricaldone;3
-Piemonte;Alessandria;6144; Rivalta Bormida;3
-Piemonte;Alessandria;6145; Rivarone;3
-Piemonte;Alessandria;6147; Rocca Grimalda;3
-Piemonte;Alessandria;6146; Roccaforte Ligure;3
-Piemonte;Alessandria;6148; Rocchetta Ligure;3
-Piemonte;Alessandria;6149; Rosignano Monferrato;4
-Piemonte;Alessandria;6150; Sala Monferrato;4
-Piemonte;Alessandria;6151; Sale;3
-Piemonte;Alessandria;6152; San Cristoforo;3
-Piemonte;Alessandria;6153; San Giorgio Monferrato;4
-Piemonte;Alessandria;6154; San Salvatore Monferrato;4
-Piemonte;Alessandria;6155; San Sebastiano Curone;3
-Piemonte;Alessandria;6156; Sant'Agata Fossili;3
-Piemonte;Alessandria;6157; Sardigliano;3
-Piemonte;Alessandria;6158; Sarezzano;3
-Piemonte;Alessandria;6159; Serralunga di Crea;4
-Piemonte;Alessandria;6160; Serravalle Scrivia;3
-Piemonte;Alessandria;6161; Sezzadio;3
-Piemonte;Alessandria;6162; Silvano d'Orba;3
-Piemonte;Alessandria;6163; Solero;4
-Piemonte;Alessandria;6164; Solonghello;4
-Piemonte;Alessandria;6165; Spigno Monferrato;3
-Piemonte;Alessandria;6166; Spineto Scrivia;3
-Piemonte;Alessandria;6167; Stazzano;3
-Piemonte;Alessandria;6168; Strevi;3
-Piemonte;Alessandria;6169; Tagliolo Monferrato;3
-Piemonte;Alessandria;6170; Tassarolo;3
-Piemonte;Alessandria;6171; Terruggia;4
-Piemonte;Alessandria;6172; Terzo;3
-Piemonte;Alessandria;6173; Ticineto;4
-Piemonte;Alessandria;6174; Tortona;3
-Piemonte;Alessandria;6175; Treville;4
-Piemonte;Alessandria;6176; Trisobbio;3
-Piemonte;Alessandria;6177; Valenza;4
-Piemonte;Alessandria;6178; Valmacca;4
-Piemonte;Alessandria;6179; Vignale Monferrato;4
-Piemonte;Alessandria;6180; Vignole Borbera;3
-Piemonte;Alessandria;6181; Viguzzolo;3
-Piemonte;Alessandria;6182; Villadeati;4
-Piemonte;Alessandria;6183; Villalvernia;3
-Piemonte;Alessandria;6184; Villamiroglio;4
-Piemonte;Alessandria;6185; Villanova Monferrato;4
-Piemonte;Alessandria;6186; Villaromagnano;3
-Piemonte;Alessandria;6187; Visone;3
-Piemonte;Alessandria;6188; Volpedo;3
-Piemonte;Alessandria;6189; Volpeglino;3
-Piemonte;Alessandria;6190; Voltaggio;3
+Piemonte;Alessandria;6001;Acqui Terme;3
+Piemonte;Alessandria;6002;Albera Ligure;3
+Piemonte;Alessandria;6003;Alessandria;3
+Piemonte;Alessandria;6004;Alfiano Natta;4
+Piemonte;Alessandria;6005;Alice Bel Colle;3
+Piemonte;Alessandria;6192;Alluvioni Piovera;3
+Piemonte;Alessandria;6007;Altavilla Monferrato;4
+Piemonte;Alessandria;6008;Alzano Scrivia;3
+Piemonte;Alessandria;6009;Arquata Scrivia;3
+Piemonte;Alessandria;6010;Avolasca;3
+Piemonte;Alessandria;6011;Balzola;4
+Piemonte;Alessandria;6012;Basaluzzo;3
+Piemonte;Alessandria;6013;Bassignana;4
+Piemonte;Alessandria;6014;Belforte Monferrato;3
+Piemonte;Alessandria;6015;Bergamasco;4
+Piemonte;Alessandria;6016;Berzano di Tortona;3
+Piemonte;Alessandria;6017;Bistagno;3
+Piemonte;Alessandria;6018;Borghetto di Borbera;3
+Piemonte;Alessandria;6020;Borgo San Martino;4
+Piemonte;Alessandria;6019;Borgoratto Alessandrino;3
+Piemonte;Alessandria;6021;Bosco Marengo;3
+Piemonte;Alessandria;6022;Bosio;3
+Piemonte;Alessandria;6023;Bozzole;4
+Piemonte;Alessandria;6024;Brignano-Frascata;3
+Piemonte;Alessandria;6025;Cabella Ligure;3
+Piemonte;Alessandria;6026;Camagna Monferrato;4
+Piemonte;Alessandria;6027;Camino;4
+Piemonte;Alessandria;6028;Cantalupo Ligure;3
+Piemonte;Alessandria;6029;Capriata d'Orba;3
+Piemonte;Alessandria;6030;Carbonara Scrivia;3
+Piemonte;Alessandria;6031;Carentino;4
+Piemonte;Alessandria;6032;Carezzano;3
+Piemonte;Alessandria;6033;Carpeneto;3
+Piemonte;Alessandria;6034;Carrega Ligure;3
+Piemonte;Alessandria;6035;Carrosio;3
+Piemonte;Alessandria;6036;Cartosio;3
+Piemonte;Alessandria;6037;Casal Cermelli;3
+Piemonte;Alessandria;6039;Casale Monferrato;4
+Piemonte;Alessandria;6038;Casaleggio Boiro;3
+Piemonte;Alessandria;6040;Casalnoceto;3
+Piemonte;Alessandria;6041;Casasco;3
+Piemonte;Alessandria;6191;Cassano Spinola;3
+Piemonte;Alessandria;6043;Cassine;3
+Piemonte;Alessandria;6044;Cassinelle;3
+Piemonte;Alessandria;6045;Castellania Coppi;3
+Piemonte;Alessandria;6046;Castellar Guidobono;3
+Piemonte;Alessandria;6047;Castellazzo Bormida;3
+Piemonte;Alessandria;6048;Castelletto d'Erro;3
+Piemonte;Alessandria;6049;Castelletto d'Orba;3
+Piemonte;Alessandria;6050;Castelletto Merli;4
+Piemonte;Alessandria;6051;Castelletto Monferrato;4
+Piemonte;Alessandria;6052;Castelnuovo Bormida;3
+Piemonte;Alessandria;6053;Castelnuovo Scrivia;3
+Piemonte;Alessandria;6054;Castelspina;3
+Piemonte;Alessandria;6055;Cavatore;3
+Piemonte;Alessandria;6056;Cella Monte;4
+Piemonte;Alessandria;6057;Cereseto;4
+Piemonte;Alessandria;6058;Cerreto Grue;3
+Piemonte;Alessandria;6059;Cerrina Monferrato;4
+Piemonte;Alessandria;6060;Coniolo;4
+Piemonte;Alessandria;6061;Conzano;4
+Piemonte;Alessandria;6062;Costa Vescovato;3
+Piemonte;Alessandria;6063;Cremolino;3
+Piemonte;Alessandria;6065;Denice;3
+Piemonte;Alessandria;6066;Dernice;3
+Piemonte;Alessandria;6067;Fabbrica Curone;3
+Piemonte;Alessandria;6068;Felizzano;4
+Piemonte;Alessandria;6069;Fraconalto;3
+Piemonte;Alessandria;6070;Francavilla Bisio;3
+Piemonte;Alessandria;6071;Frascaro;3
+Piemonte;Alessandria;6072;Frassinello Monferrato;4
+Piemonte;Alessandria;6073;Frassineto Po;4
+Piemonte;Alessandria;6074;Fresonara;3
+Piemonte;Alessandria;6075;Frugarolo;3
+Piemonte;Alessandria;6076;Fubine Monferrato;4
+Piemonte;Alessandria;6077;Gabiano;4
+Piemonte;Alessandria;6078;Gamalero;3
+Piemonte;Alessandria;6079;Garbagna;3
+Piemonte;Alessandria;6081;Gavi;3
+Piemonte;Alessandria;6082;Giarole;4
+Piemonte;Alessandria;6083;Gremiasco;3
+Piemonte;Alessandria;6084;Grognardo;3
+Piemonte;Alessandria;6085;Grondona;3
+Piemonte;Alessandria;6086;Guazzora;3
+Piemonte;Alessandria;6087;Isola Sant'Antonio;3
+Piemonte;Alessandria;6088;Lerma;3
+Piemonte;Alessandria;6193;Lu e Cuccaro Monferrato;4
+Piemonte;Alessandria;6090;Malvicino;3
+Piemonte;Alessandria;6091;Masio;4
+Piemonte;Alessandria;6092;Melazzo;3
+Piemonte;Alessandria;6093;Merana;3
+Piemonte;Alessandria;6094;Mirabello Monferrato;4
+Piemonte;Alessandria;6095;Molare;3
+Piemonte;Alessandria;6096;Molino dei Torti;3
+Piemonte;Alessandria;6097;Mombello Monferrato;4
+Piemonte;Alessandria;6098;Momperone;3
+Piemonte;Alessandria;6099;Moncestino;4
+Piemonte;Alessandria;6100;Mongiardino Ligure;3
+Piemonte;Alessandria;6101;Monleale;3
+Piemonte;Alessandria;6102;Montacuto;3
+Piemonte;Alessandria;6103;Montaldeo;3
+Piemonte;Alessandria;6104;Montaldo Bormida;3
+Piemonte;Alessandria;6105;Montecastello;3
+Piemonte;Alessandria;6106;Montechiaro d'Acqui;3
+Piemonte;Alessandria;6107;Montegioco;3
+Piemonte;Alessandria;6108;Montemarzino;3
+Piemonte;Alessandria;6109;Morano sul Po;4
+Piemonte;Alessandria;6110;Morbello;3
+Piemonte;Alessandria;6111;Mornese;3
+Piemonte;Alessandria;6112;Morsasco;3
+Piemonte;Alessandria;6113;Murisengo;4
+Piemonte;Alessandria;6114;Novi Ligure;3
+Piemonte;Alessandria;6115;Occimiano;4
+Piemonte;Alessandria;6116;Odalengo Grande;4
+Piemonte;Alessandria;6117;Odalengo Piccolo;4
+Piemonte;Alessandria;6118;Olivola;4
+Piemonte;Alessandria;6119;Orsara Bormida;3
+Piemonte;Alessandria;6120;Ottiglio;4
+Piemonte;Alessandria;6121;Ovada;3
+Piemonte;Alessandria;6122;Oviglio;4
+Piemonte;Alessandria;6123;Ozzano Monferrato;4
+Piemonte;Alessandria;6124;Paderna;3
+Piemonte;Alessandria;6125;Pareto;3
+Piemonte;Alessandria;6126;Parodi Ligure;3
+Piemonte;Alessandria;6127;Pasturana;3
+Piemonte;Alessandria;6128;Pecetto di Valenza;4
+Piemonte;Alessandria;6129;Pietra Marazzi;3
+Piemonte;Alessandria;6131;Pomaro Monferrato;4
+Piemonte;Alessandria;6132;Pontecurone;3
+Piemonte;Alessandria;6133;Pontestura;4
+Piemonte;Alessandria;6134;Ponti;3
+Piemonte;Alessandria;6135;Ponzano Monferrato;4
+Piemonte;Alessandria;6136;Ponzone;3
+Piemonte;Alessandria;6137;Pozzol Groppo;3
+Piemonte;Alessandria;6138;Pozzolo Formigaro;3
+Piemonte;Alessandria;6139;Prasco;3
+Piemonte;Alessandria;6140;Predosa;3
+Piemonte;Alessandria;6141;Quargnento;4
+Piemonte;Alessandria;6142;Quattordio;4
+Piemonte;Alessandria;6143;Ricaldone;3
+Piemonte;Alessandria;6144;Rivalta Bormida;3
+Piemonte;Alessandria;6145;Rivarone;3
+Piemonte;Alessandria;6147;Rocca Grimalda;3
+Piemonte;Alessandria;6146;Roccaforte Ligure;3
+Piemonte;Alessandria;6148;Rocchetta Ligure;3
+Piemonte;Alessandria;6149;Rosignano Monferrato;4
+Piemonte;Alessandria;6150;Sala Monferrato;4
+Piemonte;Alessandria;6151;Sale;3
+Piemonte;Alessandria;6152;San Cristoforo;3
+Piemonte;Alessandria;6153;San Giorgio Monferrato;4
+Piemonte;Alessandria;6154;San Salvatore Monferrato;4
+Piemonte;Alessandria;6155;San Sebastiano Curone;3
+Piemonte;Alessandria;6156;Sant'Agata Fossili;3
+Piemonte;Alessandria;6157;Sardigliano;3
+Piemonte;Alessandria;6158;Sarezzano;3
+Piemonte;Alessandria;6159;Serralunga di Crea;4
+Piemonte;Alessandria;6160;Serravalle Scrivia;3
+Piemonte;Alessandria;6161;Sezzadio;3
+Piemonte;Alessandria;6162;Silvano d'Orba;3
+Piemonte;Alessandria;6163;Solero;4
+Piemonte;Alessandria;6164;Solonghello;4
+Piemonte;Alessandria;6165;Spigno Monferrato;3
+Piemonte;Alessandria;6166;Spineto Scrivia;3
+Piemonte;Alessandria;6167;Stazzano;3
+Piemonte;Alessandria;6168;Strevi;3
+Piemonte;Alessandria;6169;Tagliolo Monferrato;3
+Piemonte;Alessandria;6170;Tassarolo;3
+Piemonte;Alessandria;6171;Terruggia;4
+Piemonte;Alessandria;6172;Terzo;3
+Piemonte;Alessandria;6173;Ticineto;4
+Piemonte;Alessandria;6174;Tortona;3
+Piemonte;Alessandria;6175;Treville;4
+Piemonte;Alessandria;6176;Trisobbio;3
+Piemonte;Alessandria;6177;Valenza;4
+Piemonte;Alessandria;6178;Valmacca;4
+Piemonte;Alessandria;6179;Vignale Monferrato;4
+Piemonte;Alessandria;6180;Vignole Borbera;3
+Piemonte;Alessandria;6181;Viguzzolo;3
+Piemonte;Alessandria;6182;Villadeati;4
+Piemonte;Alessandria;6183;Villalvernia;3
+Piemonte;Alessandria;6184;Villamiroglio;4
+Piemonte;Alessandria;6185;Villanova Monferrato;4
+Piemonte;Alessandria;6186;Villaromagnano;3
+Piemonte;Alessandria;6187;Visone;3
+Piemonte;Alessandria;6188;Volpedo;3
+Piemonte;Alessandria;6189;Volpeglino;3
+Piemonte;Alessandria;6190;Voltaggio;3
 Piemonte;Biella;96001;Ailoche;4
 Piemonte;Biella;96002;Andorno Micca;3
 Piemonte;Biella;96003;Benna;4
@@ -7624,7 +7623,7 @@ Veneto;Treviso;26008;Carbonera;2
 Veneto;Treviso;26009;Casale sul Sile;3
 Veneto;Treviso;26010;Casier;3
 Veneto;Treviso;26011;Castelcucco;2
-Veneto;Treviso;26012;Castelfranco Veneto;2;;;;;; ;;
+Veneto;Treviso;26012;Castelfranco Veneto;2
 Veneto;Treviso;26013;Castello di Godego;2
 Veneto;Treviso;26014;Cavaso del Tomba;2
 Veneto;Treviso;26015;Cessalto;3

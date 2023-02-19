@@ -162,7 +162,7 @@ begin
                     f.write("#{title},#{matches.join("-")},#{zonesismiche.join("-").upcase}\n")
                     if active
                         text.gsub!(/\|\s*Zona\ssismica\s*=\s*[\w\d\-]+/i, "|Zona sismica = #{zonesismiche.join("-").upcase}")
-                        wikipedia.edit(title: title, text: text, summary: "Aggiornamento del dato della zona sismica al 31 marzo 2022", bot: true)
+                        wikipedia.edit(title: title, text: text, summary: "Aggiornamento del dato della zona sismica al 31 dicembre 2022", bot: true)
                         puts "Pagina #{title} aggiornata con successo"
                     end
                 end
