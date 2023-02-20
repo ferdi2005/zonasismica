@@ -5,7 +5,6 @@ require 'json'
 require 'csv'
 require 'progress_bar'
 
-
 unless File.exist? "#{__dir__}/.config"
     puts 'Inserisci username:'
     print '> '
@@ -68,7 +67,8 @@ begin
         lista.close    
     end
     pages = JSON.parse(File.read("#{__dir__}/frazioni.txt"))
-    
+    pages.reject! { |p| p.nil? || (p["comune"].nil? || p["comune"].empty?) if p.nil? }
+
     bar = ProgressBar.new(zone.count)
     # zone.each_row_streaming do |row|
     zone.each do |row|
@@ -132,80 +132,77 @@ begin
         # search = wikipedia.query(list: "search", srsearch: stringaricerca, srlimit: 1)
             # page = search.data["search"][0]["title"]
 
-        if pages.select { |e| e["comune"].include?(row[3])}.count == 1
-            page = pages.find { |e| e["comune"].include?(row[3])}
-        elsif pages.select { |e| e["comune"].include?(row[3])}.count > 1
-            if pages.find { |e| e["comune"] == row[3]} != nil
-                page = pages.find { |e| e["comune"] == row[3]}
-            elsif pages.find { |e| e["comune"] == "#{row[3]} (Italia)"} != nil
-                page = pages.find { |e| e["comune"] == "#{row[3]} (Italia)"}
-            elsif pages.find { |e| e["comune"] == "#{row[3]} (comune)"} != nil
-                page = pages.find { |e| e["comune"] == "#{row[3]} (comune)"}
-            elsif pages.find { |e| e["comune"] == "#{row[3]} (comune italiano)"} != nil
-                page = pages.find { |e| e["comune"] == "#{row[3]} (comune italiano)"}
-            # verifica la regione come disambiguante
-            elsif pages.find { |e| e["comune"] == "#{row[3]} (#{row[0]})"} != nil
-                page = pages.find { |e| e["comune"] == "#{row[3]} (#{row[0]})"}
-            # verifica la provincia come disambiguante
-            elsif pages.find { |e| e["comune"] == "#{row[3]} (#{row[1]})"} != nil
-                page = pages.find { |e| e["comune"] == "#{row[3]} (#{row[1]})"}
-            else
-                puts "#{row[3]} più opzioni"
+    if pages.select { |e| e["comune"].include?(row[3])} != nil
+        if pages.find { |e| e["comune"] == row[3]} != nil
+            frazioni = pages.select { |e| e["comune"] == row[3]}
+        elsif pages.find { |e| e["comune"] == "#{row[3]} (Italia)"} != nil
+            frazioni = pages.select { |e| e["comune"] == "#{row[3]} (Italia)"}
+        elsif pages.find { |e| e["comune"] == "#{row[3]} (comune)"} != nil
+            frazioni = pages.select { |e| e["comune"] == "#{row[3]} (comune)"}
+        elsif pages.find { |e| e["comune"] == "#{row[3]} (comune italiano)"} != nil
+            frazioni = pages.select { |e| e["comune"] == "#{row[3]} (comune italiano)"}
+        # verifica la regione come disambiguante
+        elsif pages.find { |e| e["comune"] == "#{row[3]} (#{row[0]})"} != nil
+            frazioni = pages.select { |e| e["comune"] == "#{row[3]} (#{row[0]})"}
+        # verifica la provincia come disambiguante
+        elsif pages.find { |e| e["comune"] == "#{row[3]} (#{row[1]})"} != nil
+            frazioni = pages.select { |e| e["comune"] == "#{row[3]} (#{row[1]})"}
+        end
+    elsif pages.find { |e| e["comune"] == "#{row[3]} (Italia)"} != nil
+        frazioni = pages.select { |e| e["comune"] == "#{row[3]} (Italia)"}
+    elsif pages.find { |e| e["comune"].include?(row[3].gsub("è","é"))} != nil 
+        frazioni = pages.select { |e| e["comune"].include?(row[3].gsub("è","é"))}
+    elsif pages.find { |e| e["comune"].include?(row[3].gsub("é","è"))} != nil 
+        frazioni = pages.select { |e| e["comune"].include?(row[3].gsub("é","è"))}
+    elsif pages.find { |e| e["comune"].include?(row[3])} != nil
+        frazioni = pages.select { |e| e["comune"].include?(row[3])}
+    elsif pages.find { |e| e["comune"].include?(row[3].gsub("-", "_"))} != nil
+        frazioni = pages.select { |e| e["comune"].include?(row[3].gsub("-", "_"))}
+    elsif pages.find { |e| e["comune"].include?(row[3].gsub("_", "-"))} != nil
+        frazioni = pages.select { |e| e["comune"].include?(row[3].gsub("_", "-"))}
+    elsif pages.find { |e| e["comune"].include?(row[3].gsub(" - ", "-"))} != nil
+        frazioni = pages.select { |e| e["comune"].include?(row[3].gsub(" - ", "-"))}
+    elsif pages.find { |e| e["comune"].include?(row[3])} != nil
+        frazioni = pages.select { |e| e["comune"].include?(row[3])}
+    elsif pages.find { |e| e["comune"].include?(row[3].gsub("d'","di "))} != nil 
+        frazioni = pages.select { |e| e["comune"].include?(row[3].gsub("d'","di "))}
+    else
+        frazioni = pages.select { |e| e["comune"].include?(row[3])}
+    end 
+    
+    next if frazioni.nil? # Va avanti se il comune non ha frazioni
+
+        frazioni.each do |page|
+            begin
+                title = page["title"]
+                text = page["text"]
+                if text.match?(/\|\s*Zona\ssismica\s*=\s*([\d\w\-]+)/i)
+                        zonasismica = row[4]
+                        zonesismiche = []
+                        zonasismica.to_s.scan(/(\d[ABs]*)\-*/i).each { |z| zonesismiche.push(z[0])}
+                        matches = []
+                        match = text.match(/\|\s*Zona\ssismica\s*=\s*([\dABs\-]+)/i)
+                        match[1].to_s.scan(/(\d\w*)\-*/).each { |z| matches.push(z[0])}
+                    if matches.join("-") != zonesismiche.join("-").upcase
+                        c += 1
+                        f.write("#{title},#{page["comune"]},#{matches.join("-")},#{zonesismiche.join("-").upcase}\n")
+                    # if active
+                    if false
+                            text.gsub!(/\|\s*Zona\ssismica\s*=\s*[\w\d\-]+/i, "|Zona sismica = #{zonesismiche.join("-").upcase}")
+                            wikipedia.edit(title: title, text: text, summary: "Aggiornamento del dato della zona sismica al 31 dicembre 2022 sulla base del comune", bot: true)
+                            puts "Pagina #{title} aggiornata con successo"
+                        end
+                    end
+                else
+                   # puts "#{row[3]} trovato #{title} e non matchabile (#{row[4]})"
+                    m.write("#{title},#{page["comune"]},#{row[4]}\n")
+                    n += 1
+                end
+            rescue => e
+                puts "#{row[3]}: #{e}"
                 n += 1
                 next
             end
-        elsif pages.find { |e| e["comune"] == "#{row[3]} (Italia)"} != nil
-            page = pages.find { |e| e["comune"] == "#{row[3]} (Italia)"}
-        elsif pages.find { |e| e["comune"].include?(row[3].gsub("è","é"))} != nil 
-            page = pages.find { |e| e["comune"].include?(row[3].gsub("è","é"))}
-        elsif pages.find { |e| e["comune"].include?(row[3].gsub("é","è"))} != nil 
-            page = pages.find { |e| e["comune"].include?(row[3].gsub("é","è"))}
-        elsif pages.find { |e| e["comune"].include?(row[3])} != nil
-            page = pages.find { |e| e["comune"].include?(row[3])}
-        elsif pages.find { |e| e["comune"].include?(row[3].gsub("-", "_"))} != nil
-            page = pages.find { |e| e["comune"].include?(row[3].gsub("-", "_"))}
-        elsif pages.find { |e| e["comune"].include?(row[3].gsub("_", "-"))} != nil
-            page = pages.find { |e| e["comune"].include?(row[3].gsub("_", "-"))}
-        elsif pages.find { |e| e["comune"].include?(row[3].gsub(" - ", "-"))} != nil
-            page = pages.find { |e| e["comune"].include?(row[3].gsub(" - ", "-"))}
-        elsif pages.find { |e| e["comune"].include?(row[3])} != nil
-            page = pages.find { |e| e["comune"].include?(row[3])}
-        elsif pages.find { |e| e["comune"].include?(row[3].gsub("d'","di "))} != nil 
-            page = pages.find { |e| e["comune"].include?(row[3].gsub("d'","di "))}
-        else
-            puts "#{row[3]} non trovato"
-            n += 1
-            next
-        end 
-        begin
-            title = page["title"]
-            text = page["text"]
-            if text.match?(/\|\s*Zona\ssismica\s*=\s*([\d\w\-]+)/i)
-                    zonasismica = row[4]
-                    zonesismiche = []
-                    zonasismica.to_s.scan(/(\d[ABs]*)\-*/i).each { |z| zonesismiche.push(z[0])}
-                    matches = []
-                    match = text.match(/\|\s*Zona\ssismica\s*=\s*([\dABs\-]+)/i)
-                    match[1].to_s.scan(/(\d\w*)\-*/).each { |z| matches.push(z[0])}
-                if matches.join("-") != zonesismiche.join("-").upcase
-                    c += 1
-                    f.write("#{title},#{matches.join("-")},#{zonesismiche.join("-").upcase}\n")
-                   # if active
-                   if false
-                        text.gsub!(/\|\s*Zona\ssismica\s*=\s*[\w\d\-]+/i, "|Zona sismica = #{zonesismiche.join("-").upcase}")
-                        wikipedia.edit(title: title, text: text, summary: "Aggiornamento del dato della zona sismica al 31 dicembre 2022 sulla base del comune", bot: true)
-                        puts "Pagina #{title} aggiornata con successo"
-                    end
-                end
-            else
-                puts "#{row[3]} trovato #{title} e non matchabile (#{row[4]})"
-                m.write("#{title},#{row[4]}\n")
-                n += 1
-            end
-        rescue => e
-            puts "#{row[3]}: #{e}"
-            n += 1
-            next
         end
         bar.increment!
     end
