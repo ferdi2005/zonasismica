@@ -3,6 +3,7 @@ require 'roo'
 require 'httparty'
 require 'json'
 require 'csv'
+require 'progress_bar'
 
 unless File.exist? "#{__dir__}/.config"
     puts 'Inserisci username:'
@@ -32,7 +33,7 @@ c = 0
 tot = 0
 n = 0
 unless File.exist? "#{__dir__}/lista.txt"
-    url = "https://petscan.wmflabs.org/?format=json&doit=&categories=Comuni%20d%27Italia&depth=8&project=wikipedia&lang=it&templates_yes=divisione%20amministrativa&negcats=Frazioni%20comunali%20d%27Italia"
+    url = "https://petscan.wmflabs.org/?format=json&doit=&categories=Comuni%20d%27Italia&depth=8&project=wikipedia&lang=it&templates_yes=divisione%20amministrativa&negcats=Frazioni%20comunali%20d%27Italia&show_redirects=no"
     petscan = HTTParty.get(url, timeout: 1000).to_h["*"][0]["a"]["*"]
     lista = File.open("#{__dir__}/lista.txt", "w")
     lista.write(petscan.to_json)
@@ -42,6 +43,7 @@ petscan = JSON.parse(File.read("#{__dir__}/lista.txt"))
 puts 'Inizio a processare le pagine...'
 begin
     # zone.each_row_streaming do |row|
+    bar = ProgressBar.new(zone.count)
     zone.each do |row|
         next if row[0].nil? || row[0]&.empty?
         row = row.map { |_,i| i&.strip } # Rimuovo spazi bianchi non necessari
@@ -176,7 +178,8 @@ begin
             n += 1
             next
         end
-end
+        bar.increment!
+    end
 rescue Interrupt
     puts "Salvo..."
     f.close
