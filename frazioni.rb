@@ -47,22 +47,27 @@ end
 puts 'Inizio a processare le pagine...'
 begin
     bar = ProgressBar.new(pages.count)
+    unless File.exist? "#{__dir__}/frazioni.txt"
+        pages.map! do |p|
+            begin
+                p["text"] = wikipedia.query(prop: :revisions, titles: p["title"], rvprop: :content, rvslots: "*").data["pages"].first[1]["revisions"][0]["slots"]["main"]["*"]
 
-    pages.map! do |p|
-        begin
-            p["text"] = wikipedia.query(prop: :revisions, titles: p["title"], rvprop: :content, rvslots: "*").data["pages"].first[1]["revisions"][0]["slots"]["main"]["*"]
+                p["comune"] = p["text"]&.match(/^\s*\|\s*Divisione\samm\sgrado\s3\s*=\s*(.+)$/i)[1].to_s
+            rescue NoMethodError => e
+                puts "Non trovato match #{p["title"]}"
+                next
+            end
 
-            p["comune"] = p["text"]&.match(/^\s*\|\s*Divisione\samm\sgrado\s3\s*=\s*(.+)$/i)[1].to_s
-        rescue NoMethodError => e
-            puts "Non trovato match #{p["title"]}"
-            next
+            (puts "Non trovato match #{p["title"]}"; next) if p["comune"].empty?
+
+            bar.increment!
+            p
         end
-
-        (puts "Non trovato match #{p["title"]}"; next) if p["comune"].empty?
-
-        bar.increment!
-        p
+        lista = File.open("#{__dir__}/frazioni.txt", "w")
+        lista.write(pages.to_json)
+        lista.close    
     end
+    pages = JSON.parse(File.read("#{__dir__}/frazioni.txt"))
     
     bar = ProgressBar.new(zone.count)
     # zone.each_row_streaming do |row|
@@ -188,7 +193,7 @@ begin
                    # if active
                    if false
                         text.gsub!(/\|\s*Zona\ssismica\s*=\s*[\w\d\-]+/i, "|Zona sismica = #{zonesismiche.join("-").upcase}")
-                        wikipedia.edit(title: title, text: text, summary: "Aggiornamento del dato della zona sismica al 31 dicembre 2022", bot: true)
+                        wikipedia.edit(title: title, text: text, summary: "Aggiornamento del dato della zona sismica al 31 dicembre 2022 sulla base del comune", bot: true)
                         puts "Pagina #{title} aggiornata con successo"
                     end
                 end
