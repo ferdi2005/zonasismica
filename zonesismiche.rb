@@ -28,7 +28,7 @@ f = File.open("comuni.csv", "w")
 m = File.open("mancanti.csv", "w")
 # zone = Roo::Spreadsheet.open("classificazione2020.zone")
 # zone.default_sheet = zone.sheets[0]
-zone = CSV.read("classificazione2022.csv", headers: true, col_sep: ";", skip_blanks: true)
+zone = CSV.read("classificazione2023.csv", headers: true, col_sep: ";", skip_blanks: true)
 c = 0
 tot = 0
 n = 0
@@ -41,6 +41,13 @@ unless File.exist? "#{__dir__}/lista.txt"
 end
 petscan = JSON.parse(File.read("#{__dir__}/lista.txt"))
 puts 'Inizio a processare le pagine...'
+
+# row[0]: REGIONE
+# row[1]: PROVINCIA
+# row[2]: SIGLA PROVINCIA
+# row[3]: COMUNE
+# row[4]: CODICE ISTAT
+# row[5]: ZONA SISMICA
 begin
     # zone.each_row_streaming do |row|
     bar = ProgressBar.new(zone.count)
@@ -99,6 +106,7 @@ begin
         end
 
         row[3].gsub!("sulla strada del vino", "sulla Strada del Vino") if row[3].include? "sulla strada del vino"
+        row[3] = row[3].split("/")[0] # Rimuovo la denominazione in tedesco
 
         tot += 1
         # stringaricerca = 'intitle:"' + row[3] + '" comune italiano'
@@ -153,7 +161,7 @@ begin
         begin
             text = wikitext.data["pages"].first[1]["revisions"][0]["slots"]["main"]["*"]
             if text.match?(/\|\s*Zona\ssismica\s*=\s*([\d\w\-]+)/i)
-                    zonasismica = row[4]
+                    zonasismica = row[5]
                     zonesismiche = []
                     zonasismica.to_s.scan(/(\d[ABs]*)\-*/i).each { |z| zonesismiche.push(z[0])}
                     matches = []
@@ -164,13 +172,13 @@ begin
                     f.write("#{title},#{matches.join("-")},#{zonesismiche.join("-").upcase}\n")
                     if active
                         text.gsub!(/\|\s*Zona\ssismica\s*=\s*[\w\d\-]+/i, "|Zona sismica = #{zonesismiche.join("-").upcase}")
-                        wikipedia.edit(title: title, text: text, summary: "Aggiornamento del dato della zona sismica al 31 dicembre 2022", bot: true)
+                        wikipedia.edit(title: title, text: text, summary: "Aggiornamento del dato della zona sismica al 30 aprile 2023", bot: true)
                         puts "Pagina #{title} aggiornata con successo"
                     end
                 end
             else
-                puts "#{row[3]} trovato #{title} e non matchabile (#{row[4]})"
-                m.write("#{title},#{row[4]}\n")
+                puts "#{row[3]} trovato #{title} e non matchabile (#{row[5]})"
+                m.write("#{title},#{row[5]}\n")
                 n += 1
             end
         rescue => e
