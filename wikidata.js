@@ -11,7 +11,7 @@ const generalConfig = {
         password: password
     },
     summary: "Adding seismic zone",
-    userAgent: 'ZonaSismicaBot@FerdiBot/v1.0.1 (https://ferdinando.me)',
+    userAgent: 'ZonaSismicaBot@FerdiBot/v1.1 (https://ferdinando.me)',
     bot: true,
 }
 const wbEdit = require('wikibase-edit')(generalConfig);
