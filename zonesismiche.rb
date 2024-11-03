@@ -32,7 +32,7 @@ f = File.open("comuni.csv", "w")
 m = File.open("mancanti.csv", "w")
 # zone = Roo::Spreadsheet.open("classificazione2020.zone")
 # zone.default_sheet = zone.sheets[0]
-zone = CSV.read("classificazione2023.csv", headers: true, col_sep: ";", skip_blanks: true)
+zone = CSV.read("classificazione2024.csv", headers: true, col_sep: ";", skip_blanks: true)
 c = 0
 tot = 0
 n = 0
@@ -216,7 +216,7 @@ begin
                     f.write("#{title},#{matches.join("-")},#{zonesismiche.join("-").upcase}\n")
                     if active
                         text.gsub!(/\|\s*Zona\ssismica\s*=\s*[\w\d\-]+/i, "|Zona sismica = #{zonesismiche.join("-").upcase}")
-                        wikipedia.edit(title: title, text: text, summary: "Aggiornamento del dato della zona sismica al 30 aprile 2023", bot: true)
+                        wikipedia.edit(title: title, text: text, summary: "Aggiornamento del dato della zona sismica a settembre 2024", bot: true)
                         puts "Pagina #{title} aggiornata con successo"
                     end
                 end

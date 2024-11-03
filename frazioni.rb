@@ -171,10 +171,10 @@ begin
     end 
     
     next if frazioni.nil? # Va avanti se il comune non ha frazioni
-
         frazioni.each do |page|
+            next if page["comune"] == "Treppo Ligosullo" # eccezione
             begin
-                title = page["title"]
+                title = page["title"] 
                 text = page["text"]
                 if text.match?(/\|\s*Zona\ssismica\s*=\s*([\d\w\-]+)/i)
                         zonasismica = row[4]
@@ -186,8 +186,7 @@ begin
                     if matches.join("-") != zonesismiche.join("-").upcase
                         c += 1
                         f.write("#{title},#{page["comune"]},#{matches.join("-")},#{zonesismiche.join("-").upcase}\n")
-                    # if active
-                    if false
+                        if active
                             text.gsub!(/\|\s*Zona\ssismica\s*=\s*[\w\d\-]+/i, "|Zona sismica = #{zonesismiche.join("-").upcase}")
                             wikipedia.edit(title: title, text: text, summary: "Aggiornamento del dato della zona sismica al 31 dicembre 2022 sulla base del comune", bot: true)
                             puts "Pagina #{title} aggiornata con successo"
